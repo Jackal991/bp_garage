@@ -1,0 +1,3998 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/heebo/v22/NGSpv5_NC0k9P_v6ZUCbLRAHxK1Euyysd0mm_00.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+  /* latin */
+@font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/heebo/v22/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EuyysdUmm.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "interblack";
+    src: url("Inter-Black.ttf");
+     
+}
+
+@font-face {
+    font-family: "interbold";
+    src: url("Inter-Bold.ttf");
+     
+}
+
+@font-face {
+    font-family: "intersemi";
+    src: url("Inter-SemiBold.ttf");
+     
+}
+@font-face {
+    font-family: "intermedium";
+    src: url("Inter-Medium.ttf");
+     
+}
+
+@font-face {
+    font-family: "akira";
+    src: url("akira.otf");
+     
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    user-select: none;
+    overflow: hidden;
+    /* z-index: 7; */
+
+}
+
+
+.garageall{
+    height: 100%;
+    /* opacity: 0.88; */
+    background: #000000e2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url(mm.png); */
+ 
+    z-index: -1;
+}
+
+
+.garageall_resim {
+    height: 100%;
+    background: #000000e2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     
+ 
+    z-index: -1;
+}
+/* -------------------------------------------------- garage buy ------------------------------------------------------------------  */
+
+.garage_buy{
+    position: absolute;
+    left: 27%;
+    top: 27%;
+    width: 892px;
+    height: 464px;
+    flex-shrink: 0; 
+    border-radius: 13px;
+  background: linear-gradient(225deg, #070707 0%, #2F2F2F 100%);
+  display: none;
+
+
+
+}
+
+
+
+.garage_buy_left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 234px;
+}
+
+.garage_buy_left_1{
+    position: absolute;
+    width: 100%;
+    height: 234px;
+    z-index: 2;
+}
+
+.garage_buy_left_1_kalp{
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+
+.garage_buy_left_1_img{
+    /* position: relative; */
+    width: 100%;
+    height:100%;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #6a635d39, #15151529); */
+   /* border: 1px solid rgba(133, 127, 120, 0.664);  */
+  
+  
+    display:inline-block;
+    vertical-align:middle;
+  
+}
+
+
+.garage_buy_left_1_img img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+
+.garage_buy_left_2{
+    position: absolute;
+    width: 100%;
+    height: 244px;
+    margin-top: 220px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    
+}
+
+
+
+.garage_buy_left_2_img{
+    /* position: relative; */
+    width: 100%;
+    height:100%;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #6a635d39, #15151529); */
+   /* border: 1px solid rgba(133, 127, 120, 0.664);  */
+  
+  
+    display:inline-block;
+    vertical-align:middle;
+  
+}
+
+
+.garage_buy_left_2_img img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding: 5px; */
+    padding-left: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    /* margin: 5px; */
+    
+}
+
+.garage_buy_left_2_info{
+    position: absolute;
+    /* width: 200px; */
+    /* height: 100px; */
+    /* background-color: red; */
+    margin-top: 45px;
+    margin-left: 40px;
+    color: rgba(0, 255, 102, 1);
+font-family: interblack;
+font-size: 24px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+
+
+.garage_buy_left_2_info2{
+    position: absolute;
+    /* width: 200px; */
+    /* height: 100px; */
+    /* background-color: red; */
+    margin-top: 100px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.garage_buy_left_2_info2_txt{
+    color: #FFF;
+font-family: intermedium;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-left: 10px;
+letter-spacing: 0.7px;
+}
+
+.garage_buy_left_2_info3{
+    position: absolute;
+    /* width: 200px; */
+    /* height: 100px; */
+    /* background-color: red; */
+    margin-top: 150px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.garage_buy_left_2_info3_txt{
+    color: #FFF;
+font-family: interblack;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-left: 10px;
+letter-spacing: 0.7px;
+}
+
+
+.garage_buy_left_2_info4{
+    position: absolute;
+    /* width: 200px; */
+    /* height: 100px; */
+    /* background-color: red; */
+    margin-top: 200px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftcheck{
+    margin-right:5px; color:#F0AD01;
+    
+}
+
+
+.checked {
+    color: #242424;
+}
+
+
+.garage_buy_right{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    /* background-color: red; */
+}
+
+
+
+.garage_buy_right_top1{
+    position: absolute;
+    width: 100%;
+    height: 244px;
+    margin-top: 20px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+
+    font-family: intermedium;
+font-size: 30px;
+font-style: normal;
+font-weight: 900;
+margin-left: 5px;
+color: #FFF;
+line-height: normal;
+
+text-transform: uppercase;
+    
+}
+
+
+.garage_buy_right_top2{
+    position: absolute;
+    width: 90%;
+    height: 85px;
+    margin-top: 60px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    border-bottom: 2px solid #454545;;
+    
+    
+}
+
+.garage_buy_right_top3{
+    position: absolute;
+    width: 90%;
+    height: 8px;
+    margin-top: 150px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    text-transform: uppercase;
+    
+    
+}
+
+.garage_buy_right_top4{
+    position: absolute;
+    width: 90%;
+    height: 65px;
+    margin-top: 172px;
+    z-index: 1;
+    /* background-color: rgb(159, 159, 42); */
+    display: flex;
+    margin-left: 5px;
+   
+    
+    
+}
+
+.garage_buy_right_top4_1{
+    position: absolute;
+    width: 49px;
+    height:49px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #6a635d39, #15151529); */
+   /* border: 1px solid rgba(133, 127, 120, 0.664);  */
+   background-color: #393939;
+  
+    display:inline-block;
+    vertical-align:middle;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+.garage_buy_right_top4_1 img{
+    border-radius: 13.347px;
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding: 5px; */
+    width: 49px;
+    height: 49px;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+.garage_buy_right_top4_2{
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+    margin-top: 10px;
+}
+
+.garage_buy_right_top4_2_1{
+    color: #FFF;
+    font-family: intermedium;
+font-size: 14px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+
+
+.garage_buy_right_top4_2_2{
+    color: #797979;
+    font-family: intermedium;
+font-size: 9px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+
+                        
+.garage_buy_right_top4_3{
+    position: absolute;
+    /* width: 60px; */
+    /* height: 50px; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    top: 0;
+}         
+
+.garage_buy_right_top4_3_1{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    
+}
+
+.garage_buy_right_top4_3_1_1{
+    color: #FFF;
+text-align: right;
+font-family: intermedium;
+font-size: 9px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-align: left;
+}
+
+.garage_buy_right_top4_3_1_2{
+    color: #FFF;
+text-align: right;
+font-family: intermedium;
+font-size: 14px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-align: left;
+border-bottom: 1px solid #D9D9D9;
+padding-bottom: 1px;
+margin-top: -2px;
+
+}
+
+.garage_buy_right_top4_3_1_3{
+    color: #FFF;
+text-align: right;
+font-family: intermedium;
+font-size: 8px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-align: left;
+display: flex;
+flex-direction: row;
+}
+
+
+
+.garage_buy_right_top5{
+    position: absolute;
+    width: 92%;
+    height: 175px;
+    margin-top: 232px;
+    z-index: 1;
+    background-color: rgb(159, 159, 42);
+    display: flex;
+    margin-left: 5px;
+    border-radius: 5PX;
+    
+    
+}
+
+
+.garage_buy_right_top5_img{
+    /* position: relative; */
+    width: 100%;
+    height:100%;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #6a635d39, #15151529); */
+   /* border: 1px solid rgba(133, 127, 120, 0.664);  */
+  
+   border-radius: 5PX;
+  
+    display:inline-block;
+    vertical-align:middle;
+  
+}
+
+
+.garage_buy_right_top5_img img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+.garage_buy_right_top6{
+    position: absolute;
+    width: 133px;
+    height: 33px;
+    margin-top: 415px;
+    right: 33px;
+    z-index: 1;
+    border-radius: 5px;
+    background: linear-gradient(95deg, #57FF54 0%, #277526 73.44%);
+    display: flex;
+   cursor: pointer;
+    
+    
+}
+
+.garage_buy_right_top6:hover{
+    background: linear-gradient(95deg, #57ff547a 0%, #277526 73.44%);
+    
+}
+
+/* -------------------------------------------------- garage create ------------------------------------------------------------------  */
+
+
+
+.garage_create{
+    position: absolute;
+    left: 27%;
+    top: 27%;
+    width: 892px;
+    height: 464px;
+    flex-shrink: 0; 
+    border-radius: 13px;
+  background: linear-gradient(225deg, #070707 0%, #2F2F2F 100%);
+  /* display: none; */
+
+  
+
+
+}
+
+.garage_create_left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 100%;
+    padding: 5px;
+    /* background-color: red; */
+}
+
+.garage_create_left_img{
+    /* position: relative; */
+    width: 100%;
+    height:100%;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #6a635d39, #15151529); */
+   /* border: 1px solid rgba(133, 127, 120, 0.664);  */
+  
+   border-radius: 5PX;
+  
+    display:inline-block;
+    vertical-align:middle;
+  
+}
+
+
+.garage_create_left_img img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 100%;
+    height: 100%;
+    /* image-rendering: pixelated; */
+   object-fit: none;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+.garage_create_right{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    /* background-color: red; */
+}
+
+.garage_create_right_top1{
+    position: absolute;
+    width: 100%;
+    height: 244px;
+    margin-top: 10px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+
+    font-family: intermedium;
+font-size: 30px;
+font-style: normal;
+font-weight: 900;
+margin-left: 5px;
+color: #FFF;
+line-height: normal;
+    
+}
+
+
+.garage_create_right_top2{
+    position: absolute;
+    width: 90%;
+    height: 85px;
+    margin-top: 50px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    border-bottom: 2px solid #454545;;
+    
+    
+}
+
+
+.garage_create_right_top3{
+    position: absolute;
+    width: 92%;
+    height: 120px;
+    margin-top: 140px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #45454583;
+    /* padding-bottom: 20px; */
+
+    /* opacity: 0.28; */
+}
+
+.garage_create_right_top3_1{
+    width: 105px;
+    height: 105px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+    /* opacity: 0.9; */
+    cursor: pointer;
+
+}
+
+.garage_create_right_top3_1 img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.702);
+
+    border-radius: 10px;
+
+}
+
+.garagetypehover{
+     border: 2px solid rgba(255, 255, 255, 0.702);
+
+    border-radius: 10px;
+}
+
+.garage_create_right_top3_1 img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 105px;
+    height: 105px;
+    image-rendering: pixelated;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+
+.garage_create_right_top3_2{
+    width: 105px;
+    height: 105px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+    /* opacity: 0.8; */
+    margin-left: 10px;
+    cursor: pointer;
+   
+}
+
+.garage_create_right_top3_2 img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.702);
+    border-radius: 10px;
+
+}
+
+.garage_create_right_top3_2 img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 105px;
+    height: 105px;
+    image-rendering: pixelated;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+
+
+.garage_create_right_top3_3{
+    width: 105px;
+    height: 105px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+    /* opacity: 0.8; */
+    margin-left: 10px;
+    cursor: pointer;
+   
+}
+
+.garage_create_right_top3_3 img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.702);
+
+    border-radius: 10px;
+
+}
+
+.garage_create_right_top3_3 img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 105px;
+    height: 105px;
+    image-rendering: pixelated;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+
+
+.garage_create_right_top3_4{
+    width: 105px;
+    height: 105px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+    /* opacity: 0.8; */
+    margin-left: 10px;
+    cursor: pointer;
+   
+}
+
+.garage_create_right_top3_4 img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.702);
+
+    border-radius: 10px;
+
+}
+
+.garage_create_right_top3_4 img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 105px;
+    height: 105px;
+    image-rendering: pixelated;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+
+.garage_create_right_top4{
+    position: absolute;
+    width: 90%;
+    height: 8px;
+    margin-top: 266px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    text-transform: uppercase;
+    
+    
+}
+
+
+.garage_create_right_top5{
+    position: absolute;
+    width: 90%;
+    /* height: 8px; */
+    margin-top: 285px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 5px;
+    /* align-items: center;
+    justify-content: center; */
+  
+    
+    
+}
+
+
+.demotext{
+    position: absolute; font-family: intermedium; font-size: 10px; font-weight: 500; line-height: 12px; letter-spacing: 0em; text-align: left; color:#ffffff96; margin-top:45px;  width:90px;text-align:center;margin-left:7px; 
+    /* background:red; */
+}
+
+.garage_create_right_top5_item{
+    width: 30px;
+    height: 30px;
+    background-color: #0075FF;
+    border-radius: 50%;
+    margin-right: 7px;
+    
+}
+
+.garage_create_right_top5_item:hover{
+    border: 2px solid rgba(255, 255, 255, 0.702);
+
+}
+
+.garagecolorhover{
+    border: 2px solid rgba(90, 87, 87, 0.702);
+
+}
+
+.garage_create_right_top6{
+    position: absolute;
+    width: 90%;
+    /* height: 8px; */
+    margin-top: 325px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+
+  
+    
+}
+
+.garage_create_right_top6_1{
+    width: 220px;
+    height: 35px;
+    background-color: #3F3F3F;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+}
+
+.garage_create_right_top6_1_icon{
+    width: 31px;
+    /* background-color: red; */
+  margin-top: 6px;
+  margin-left: 6px;
+  opacity: 0.3;
+}
+
+.garage_create_right_top6_1_icon2{
+    width: 27px;
+    /* background-color: red; */
+  margin-top: 8px;
+  margin-left: 9px;
+  opacity: 0.3;
+}
+
+
+.garage_create_right_top6_1_icon3{
+    width: 27px;
+    /* background-color: red; */
+  margin-top: 5px;
+  margin-left: 9px;
+  opacity: 0.3;
+}
+
+.garage_create_right_top6_1_input{
+    width: 175px;
+    height: 29px;
+    margin-top: 3px;
+    /* background-color: red; */
+    background-color: #272727;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+.garage_create_right_top7{
+    position: absolute;
+    width: 90%;
+    /* height: 8px; */
+    margin-top: 365px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+
+  
+    
+}
+
+
+.garage_create_right_top6_2{
+    width: 216px;
+    height: 35px;
+    background-color: #3F3F3F;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+}
+
+
+.garage_create_right_top6_3{
+    width: 216px;
+    height: 35px;
+    /* mar */
+
+    border-radius: 5px;
+   /* background-color: red; */
+   background: linear-gradient(94.59deg, #57FF54 0%, #277526 73.44%);
+
+
+text-align: center;
+cursor: pointer;
+
+
+
+}
+
+
+.garage_create_right_top6_3:hover{
+   background: linear-gradient(94.59deg, #57ff5482 0%, #277526 73.44%);
+    
+}
+
+
+
+.garage_create_right_top8{
+    position: absolute;
+    width: 90%;
+    height: 8px;
+    margin-top: 410px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+
+  
+    
+}
+
+
+
+
+.garage_create_right_top8_1{
+    width: 47px;
+    height: 35px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+    /* opacity: 0.8; */
+    margin-top: 2px;
+    /* margin-left: 10px; */
+    cursor: pointer;
+    margin-right: 7px;
+   
+}
+
+
+
+.garage_create_right_top8_1 img{
+    border-radius: 6px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 35px;
+    height: 35px;
+    image-rendering: pixelated;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+.garage_create_right_top8_2{
+    width: 100%;
+    height: 40px;
+    font-family: intermedium;
+font-size: 10px;
+font-weight: 500;
+line-height: 12px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+opacity: 0.28;
+margin-left: 10px;
+/* background-color: red; */
+
+}
+
+
+/* -------------------------------------------------- garage settings ------------------------------------------------------------------  */
+
+
+.garage_settings{
+position: absolute;
+width: 1398px;
+height: 768px;
+top: 135px;
+left: 261px;
+border-radius: 23px;
+
+border: 4px solid #121212;
+background-color: #070707;
+/* display: none; */
+}
+
+
+.garage_settings_left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+    height: 97%;
+    /* padding: 5px; */
+    margin-top: 10px;
+    /* background-color: red; */
+    border-right: 3px solid #0E0E0E;
+}
+
+
+.garage_settings_left_img{
+    /* position: relative; */
+    width: 500px;
+    height:690px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #6a635d39, #15151529); */
+   /* border: 1px solid rgba(133, 127, 120, 0.664);  */
+   /* background-color: red; */
+  
+   border-radius: 5PX;
+  
+    display:inline-block;
+    vertical-align:middle;
+    margin-left: 13px;
+    /* margin-top: 10px; */
+    object-fit: none;
+  
+}
+
+
+.garage_settings_left_img img{
+    border-radius: 10px;
+
+    /* border: 1.027px solid #FFF; */
+    /* opacity: 0.6000000238418579; */
+    /* padding-left: 5px; */
+    /* padding-top: 5px; */
+    width: 500px;
+    height:690px;
+    /* image-rendering: pixelated; */
+   object-fit: none;
+    display: inline-block;
+    /* margin: 5px; */
+}
+
+.garage_settings_left_1{
+    width: 100%;
+    height: 190px;
+    margin-top: 15px;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+}
+
+
+.garage_settings_left_1_1{
+    width: 240px;
+    height: 150px;
+    margin-left: 13px;
+
+    border-radius: 11px;
+    background: linear-gradient(71.3deg, #0E0E0E 0%, #242424 100%);
+
+    
+}
+
+.garage_settings_left_1_1_top{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+    /* background-color: red; */
+}
+
+.garage_settings_left_1_1_top_text{
+    width: 162px;
+   height: 45px;
+   display: flex;
+   flex-direction: column;
+   margin-left:8px;
+    margin-top: 4px;
+border-radius: 9px;
+background-color: #0F0E0E;
+
+}
+
+.garage_settings_left_1_1_top_text_1{
+    font-family: interbold;
+/* background-color: red; */
+font-size: 14px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #FFFFFF;
+margin-left: 9px;
+margin-top: 5px;
+
+}
+
+.garage_settings_left_1_1_top_text_2{
+    font-family: interbold;
+
+font-size: 11px;
+font-weight: 500;
+line-height: 13px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #767676;
+margin-left:  9px;
+}
+
+
+.garage_settings_left_1_1_top_avatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:13px;
+    margin-top: 4px;
+}
+
+.garage_settings_left_1_1_top_avatar img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /* object-fit: none; */
+}
+
+.garage_settings_left_1_2{
+    width: 240px;
+    height: 150px;
+    margin-left: 18px;
+
+    border-radius: 11px;
+    background: linear-gradient(71.3deg, #0E0E0E 0%, #242424 100%);
+    display:inline-block;
+    vertical-align:middle;
+    
+}
+
+.garage_settings_left_1_2_center{
+    position: absolute;
+    width: 144px;
+height: 55px;
+border-radius: 38px;
+background-color: #0F0E0E;
+margin-top: 50px;
+margin-left: 50px;
+
+}
+
+
+.garage_settings_left_1_2 img{
+    width: 240px;
+    height: 150px;
+    /* margin-left: 13px; */
+    /* object-fit: none; */
+    border-radius: 11px;
+  
+
+    
+}
+
+.garage_settings_left_1_1_bottom{
+
+    display: flex;
+    flex-direction: row;
+    width: 92%;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 11px;
+    background-color: #0F0E0E;
+    border-radius: 9px;
+}
+
+
+.garage_settings_left_1_1_bottom_text{
+    position: absolute;
+    font-size: 12px;
+    font-family: interbold;
+
+font-weight: 700;
+line-height: 13px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+text-align: center;
+color: #767676;
+opacity: 0.2;
+margin-top: 40px;
+margin-left: 47px;
+}
+
+.garage_settings_left_1_1_bottom_text_t{
+    font-family: akira;
+font-size: 43px;
+font-weight: 800;
+line-height: 49px;
+letter-spacing: 0em;
+text-align: center;
+color: #3D3D3D;
+
+}
+
+
+
+
+.garage_settings_right_top{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 60.8%;
+    height: 19%;
+    right: 0;
+    top: 0;
+    /* background-color: blue; */
+}
+
+.garage_settings_right_top_icon{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 15px;
+    top: 12px;
+    /* background-color: beige; */
+}
+
+.garage_settings_right_top_icon_1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #262525;
+    cursor: pointer;
+    margin-bottom: 15px;
+  
+}
+.garage_settings_right_top_icon_1:hover{
+    background-color: #26252572;
+}
+
+.garage_settings_right_top_1{
+    position: absolute;
+    width: 90%;
+    height: 154px;
+    margin-top: 20px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+
+    font-family: intermedium;
+font-size: 30px;
+font-style: normal;
+font-weight: 900;
+margin-left: 5px;
+color: #FFF;
+line-height: normal;
+text-transform: uppercase;
+    
+}
+
+
+.garage_settings_right_top_2{
+    position: absolute;
+    width: 82%;
+    height: 85px;
+    margin-top: 60px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    /* border-bottom: 2px solid #454545;; */
+    
+    
+}
+
+
+.garage_settings_changepart{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 59.8%;
+    height: 78%;
+    right: 13px;
+    top: 155px;
+    background-color: #0E0E0E;
+    border-radius: 11px;
+}
+
+.garage_settings_changepart_left{
+    position: absolute;
+    width: 150px;
+    height: 90%;
+    margin-left: 40px;
+    margin-top: 10px;
+    /* background-color: red; */
+    
+   
+}
+
+.garage_settings_changepart_left_item{
+    width: 135.00001182073643px;
+    height: 70.00000612927074px;
+    background-color: #323232;
+
+   border-radius: 18px;
+   transform: rotate(24.5deg);
+   margin-top: 35px;
+   cursor: pointer;
+   border: 1px solid #343538
+}
+
+.garage_settings_changepart_left_item_1{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display:inline-block;
+    vertical-align:middle;
+    opacity: 0.5;
+}
+
+.garage_settings_changepart_left_item_1 img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.garage_settings_changepart_left_item img{
+    cursor: pointer;
+}
+
+.garage_settings_changepart_left_item:hover{
+    border: 1px solid #5C8AFF
+}
+
+.garage_settings_changepart_center{
+    position: absolute;
+
+    width: 362px;
+    height: 533px;
+    border-radius: 13px;
+
+    
+    margin-left: 230px;
+    margin-top: 30px;
+    background: linear-gradient(202.53deg, #1C1C1C 0%, #050505 100%);
+    
+
+    
+   
+}
+
+.garage_settings_changepart_center3{
+    position: absolute;
+
+    width: 362px;
+    height: 533px;
+    border-radius: 13px;
+    /* transform: perspective(1500px) rotateY(-25deg);  */
+    zoom: 0.8;
+    
+  
+    background: linear-gradient(202.53deg, #1C1C1C 0%, #050505 100%);
+    
+
+    
+   
+}
+
+.garage_settings_changepart_center_top{
+    /* position:absolute; */
+    width: 90%;
+    height: 214px;
+    margin-left: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #070707, #070707),
+linear-gradient(0deg, #111111, #111111);
+border: 3px solid #1711114d
+}
+
+.garage_settings_changepart_center_top_top{
+    position: relative;
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    z-index: 2;
+}
+
+.garage_settings_changepart_center_top_top_1{
+    width: 172px;
+height: 35px;
+
+border-radius: 4px;
+margin-left: 8px;
+margin-top: 8px;
+background: linear-gradient(90deg, #585858 0%, rgba(17, 17, 17, 0) 100%);
+display: flex;
+flex-direction: row;
+
+}
+
+.garage_settings_changepart_center_top_top_1_avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:5px;
+    margin-top: 2px;
+}
+
+.garage_settings_changepart_center_top_top_1_avatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* object-fit: none; */
+}
+
+
+
+.garage_settings_changepart_center_top_top_1_text{
+    display: flex;
+    flex-direction: column;
+    margin-top: -2px;
+}
+
+
+.garage_settings_changepart_center_top_top_1_text_1{
+    font-family: interbold;
+
+font-size: 11px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #FFFFFF;
+margin-left: 9px;
+margin-top: 5px;
+
+}
+
+.garage_settings_changepart_center_top_top_1_text_2{
+    font-family: interbold;
+
+font-size: 9px;
+font-weight: 500;
+line-height: 13px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #767676;
+margin-left:  9px;
+margin-top: -5px;
+}
+
+
+.garage_settings_changepart_center_top_top_2{
+    width: 116px;
+height: 35px;
+/* background-color: red; */
+border-radius: 4px;
+margin-left: 42px;
+margin-top: 10px;
+display: flex;
+flex-direction: row;
+
+}
+
+.garage_settings_changepart_center_top_top_2_1{
+    width: 23px;
+    border-radius: 50%;
+    height: 23px;
+    background-color:#FFB800;
+
+border: 3px solid #14121254;
+margin-top: 4px;
+margin-right: 8px;
+
+
+
+
+}
+
+.garage_settings_changepart_center_top_top_2_2{
+    font-family: interbold;
+
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 6.2Px;
+    color: #6F6F6F;
+}
+
+
+.garage_settings_changepart_center_top_center{
+    position: relative;
+    width: 99%;
+    height: 210px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    display:inline-block;
+    vertical-align:middle;
+    margin-top:-35px;
+    margin-left: 5px;
+    z-index: 1;
+}
+
+.garage_settings_changepart_center_top_center img{
+    width: 99%;
+    height: 210px;
+    z-index: -1;
+
+    /* border-radius: 50%; */
+    /* object-fit: none; */
+}
+
+.garage_settings_changepart_center_top_bottom{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    margin-left: 10px;
+    margin-top: -60px;
+    z-index: 3;
+}
+
+.garage_settings_changepart_center_top_bottom_1{
+    font-family: akira;
+
+font-size: 14px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #8B8B8B;
+margin-left: 9px;
+margin-top: 5px;
+
+}
+
+.garage_settings_changepart_center_top_bottom_2{
+    font-family: akira;
+
+font-size: 10px;
+font-weight: 500;
+line-height: 13px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #343434;
+margin-left:  9px;
+margin-top: -2px;
+
+}
+
+
+.garage_settings_changepart_center_vehiclelogo{
+    position: absolute;
+    width: 216px;
+height: 95px;
+/* background-color: red; */
+border-radius: 4px;
+display:inline-block;
+vertical-align:middle;
+margin-top: -155px;
+z-index: 3;
+margin-left: 55px;
+
+
+}
+
+.garage_settings_changepart_center_vehiclelogo img{
+    width: 216px;
+height: 95px;
+    z-index: -1;
+    /* object-fit: none; */
+    /* border-radius: 50%; */
+    /* object-fit: none; */
+}
+
+
+.garage_settings_changepart_center_bottom{
+    /* position:absolute; */
+    width: 90%;
+    height: 274px;
+    margin-left: 18px;
+    margin-top: 17px;
+    /* border-radius: 8px; */
+    /* background-color: white; */
+    border-top: 3px solid #343434;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.garage_settings_changepart_center_bottom_left{
+    height: 100%;
+    width: 100px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.garage_settings_changepart_center_bottom_left_img1{
+    margin-left: 3px;
+    margin-top: 10px;
+}
+
+.garage_settings_changepart_center_bottom_left_img1_text{
+    width: 90%;
+    position: relative;
+    /* background-color: red; */
+    font-family: interbold;
+font-size: 13px;
+font-weight: 900;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: center;
+margin-top: 75px;
+margin-left: -2px;
+
+
+}
+
+
+.garage_settings_changepart_center_bottom_left_img1_text2{
+    width: 90%;
+    position: relative;
+    /* background-color: red; */
+    font-family: interbold;
+font-size: 13px;
+font-weight: 900;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: center;
+margin-top: 50px;
+margin-left: -2px;
+
+
+}
+
+
+.garage_settings_changepart_center_bottom_left_img1_text3{
+    width: 90%;
+    position: relative;
+    /* background-color: red; */
+    font-family: interbold;
+font-size: 13px;
+font-weight: 900;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: center;
+margin-top: 50px;
+margin-left: -2px;
+
+
+}
+
+.garage_settings_changepart_center_bottom_left_img2{
+    margin-left: 3px;
+    margin-top: 22px;
+}
+
+.garage_settings_changepart_center_bottom_left_img3{
+    margin-left: 3px;
+    margin-top: 10px;
+}
+
+
+.garage_settings_changepart_center_bottom_right{
+    height: 100%;
+    width: 270px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.garage_settings_changepart_center_bottom_right_top{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.garage_settings_changepart_center_bottom_right_top_1{
+    display: flex;
+    flex-direction: column;
+    margin-left:5px;
+    margin-top: 10px;
+}
+
+.garage_settings_changepart_center_bottom_right_top_1_1{
+    font-family: intersemi;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+
+
+.garage_settings_changepart_center_bottom_right_top_1_2{
+    font-family: intersemi;
+    color: #6B6B6B;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: -5px;
+    
+}
+
+.garage_settings_changepart_center_bottom_right_top_2{
+    display: flex;
+    flex-direction: row;
+    margin-left:50px;
+    margin-top: 13px;
+    /* padding: 5px 15px; */
+    background: linear-gradient(270deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+    /* background-color: #0075FF; */
+    border-radius: 3px;
+    /* text-align: center; */
+    width: 100px;
+    height: 20px;
+    
+
+
+transform: rotate(-180deg);
+
+}
+
+.garage_settings_changepart_center_bottom_right_top_2_text{
+    display: flex;
+    font-family: intermedium;
+    font-size: 12px;
+    font-weight: 400;
+    /* line-height: 16px; */
+    /* letter-spacing: 0em; */
+    /* text-align: left; */
+    margin-bottom: 2px;
+    margin-left: 15px;
+    color:#747171;
+    text-align: center;
+transform: rotate(-180deg);
+
+
+}
+
+
+.garage_settings_changepart_center_bottom_right_bottom{
+    position: absolute;
+    width: 66%;
+    height: 210px;
+    /* background-color: red; */
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.garage_settings_changepart_center_bottom_right_bottom_item{
+    width: 233px;
+height: 69px;
+background: linear-gradient(270deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+/* background-color: #0075FF; */
+border-radius: 9px;
+transform: rotate(-180deg);
+margin-left: 5px;
+margin-bottom: 5PX;
+
+
+}
+
+.garage_settings_changepart_center_bottom_right_bottom_item_text{
+    position: absolute;
+    right: 70px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(180deg);
+
+}
+
+.garage_settings_changepart_center_bottom_right_bottom_item_text_1{
+    font-family: intersemi;
+font-size: 13px;
+font-weight: 900;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color:#FFFFFF;
+
+}
+.garage_settings_changepart_center_bottom_right_bottom_item_text_2{
+    font-family: intermedium;
+font-size: 13px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color:#747171;
+
+}
+
+
+
+#garage_settings_changepart_center_bottom_right_bottom_item_1 {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height:50px;
+    margin-top: 9px;
+    /* background-color: blue; */
+    margin-right: 10px;
+}
+
+
+.garage_settings_changepart_center_bottom_right_bottom_item_1_icon{
+    position: absolute;
+    transform: rotate(180deg);
+
+}
+
+
+
+#garage_settings_changepart_center_bottom_right_bottom_item_2 {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height:50px;
+    margin-top: 9px;
+    /* background-color: blue; */
+    margin-right: 10px;
+}
+
+#garage_settings_changepart_center_bottom_right_bottom_item_3 {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height:50px;
+    margin-top: 9px;
+    /* background-color: blue; */
+    margin-right: 10px;
+}
+
+
+
+
+.garage_settings_changepart_right{
+    position: absolute;
+    width: 150px;
+    height: 90%;
+    right: 30px;
+    margin-top: 10px;
+    /* background-color: red; */
+    
+   
+}
+
+.garage_settings_changepart_right_item{
+    width: 135.00001182073643px;
+    height: 70.00000612927074px;
+    background-color: #323232;
+
+   border-radius: 18px;
+   transform: rotate(-24.5deg);
+   margin-top: 35px;
+   cursor: pointer;
+   border: 1px solid #343538
+}
+
+.garage_settings_changepart_right_item_1{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display:inline-block;
+    vertical-align:middle;
+    opacity: 0.5;
+}
+
+.garage_settings_changepart_right_item_1 img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.garage_settings_changepart_right_item img{
+    cursor: pointer;
+}
+
+.garage_settings_changepart_right_item:hover{
+    border: 1px solid #5C8AFF
+}
+
+
+/* ---------------------------- Color part ------------------------------------------  */
+
+
+.garage_settings_colorpart{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 59.8%;
+    height: 78%;
+    right: 13px;
+    top: 155px;
+    background-color: #0E0E0E;
+    border-radius: 11px;
+}
+
+
+.garage_settings_colorpart_top{
+    width: 96%;
+    height: 400px;
+    /* background-color: red; */
+    margin-left: 25px;
+    margin-top: 16px;
+}
+
+.garage_settings_colorpart_top_item{
+    width: 185px;
+    height: 113px;
+
+border-radius: 7px;
+border: 3px solid #181818;
+background: #181818;
+overflow: hidden;
+
+display:inline-block;
+vertical-align:middle;
+cursor: pointer;
+margin-right: 10px;
+margin-bottom: 10px;
+/* margin-left: 10px; */
+
+
+}
+.garage_settings_colorpart_top_item:hover{
+border: 3px solid #FFFFFF;
+
+}
+
+.garage_settings_colorpart_top_item img{
+    width: 185px;
+    height: 113px;
+}
+
+
+.garage_settings_colorpart_bottom{
+    width: 100%;
+    height: 200px;
+    /* background-color: red; */
+ 
+    margin-top: 16px;
+    overflow: hidden;
+
+display:inline-block;
+vertical-align:middle;
+opacity: 0.7;
+}
+
+.garage_settings_colorpart_bottom img{
+    width: 100%;
+    height: 200px;
+}
+
+/* ----------------------------------- garage join part -----------------------------------------------------------------------------------------  */
+.garage_enter{
+    position: absolute;
+    width: 1398px;
+    height: 768px;
+    top: 135px;
+    left: 261px;
+    border-radius: 23px;
+    
+    border: 4px solid #121212;
+    background-color: #070707;
+    /* display: none; */
+}
+
+.garage_enter_top{
+    width: 100%;
+    height: 150px;
+    /* background-color: red; */
+    display: flex;
+}
+
+.garage_enter_top_img{
+    width: 524px;
+    height: 111px;
+
+    border-radius: 11px;
+    overflow: hidden;
+
+    display:inline-block;
+    vertical-align:middle;
+    margin-left: 20px;
+    margin-top: 25px;
+    
+}
+
+.garage_enter_top_img img{
+    width: 524px;
+    height: 111px;
+    border-radius: 11px;
+    image-rendering: pixelated;
+    
+}
+
+
+.garage_enter_top_text{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+   margin-left: 35px;
+  
+}
+
+.garage_enter_top_text_1{
+    position: absolute;
+    width: 700px;
+    height: 154px;
+    margin-top: 20px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+
+    font-family: intermedium;
+font-size: 30px;
+font-style: normal;
+font-weight: 900;
+margin-left: 5px;
+color: #FFF;
+line-height: normal;
+text-transform: uppercase;
+    
+}
+
+
+.garage_enter_top_text_2{
+    position: absolute;
+    width: 45%;
+    height: 85px;
+    margin-top: 60px;
+  
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    /* border-bottom: 2px solid #454545;; */
+    
+    
+}
+
+.garage_enter_top_icon{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 15px;
+    top: 12px;
+    /* background-color: beige; */
+}
+
+.garage_enter_top_icon_1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #262525;
+    cursor: pointer;
+    margin-bottom: 15px;
+    cursor: pointer;
+  
+}
+
+.garage_enter_top_icon_1:hover{
+
+    background-color: #FFFFFF;
+}
+
+.garage_enter_bottom{
+    width: 97%;
+    height: 590px;
+    margin-left: 20px;
+    border-radius: 11px;
+    background: #0E0E0E;
+    display: flex;
+    flex-direction: row;
+    white-space: normal;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: auto;
+  
+    /* overflow: auto; */
+
+}
+
+.garage_enter_bottom::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+.garage_enter_bottom::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+.garage_enter_bottom::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+.garage_enter_bottom::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+/* ------------------------------- burasi hard araclari goster ----------------  */
+
+.garage_enter_bottom_top{
+    /* position:absolute; */
+    width: 310px;
+    height: 214px;
+    margin-left: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #070707, #070707),
+linear-gradient(0deg, #111111, #111111);
+border: 3px solid #1711114d;
+cursor: pointer;
+
+}
+
+.garage_enter_bottom_top:hover{
+    border: 3px solid #a79e9e4d;
+}
+
+.garage_enter_bottom_top_top{
+    position: relative;
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    z-index: 2;
+}
+
+.garage_enter_bottom_top_top_1{
+    width: 172px;
+height: 35px;
+
+border-radius: 4px;
+margin-left: 8px;
+margin-top: 8px;
+background: linear-gradient(90deg, #585858 0%, rgba(17, 17, 17, 0) 100%);
+display: flex;
+flex-direction: row;
+
+}
+
+.garage_enter_bottom_top_top_1_avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:5px;
+    margin-top: 2px;
+}
+
+.garage_enter_bottom_top_top_1_avatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* object-fit: none; */
+}
+
+
+
+.garage_enter_bottom_top_top_1_text{
+    display: flex;
+    flex-direction: column;
+    margin-top: -2px;
+    /* background-color: blue; */
+}
+
+
+.garage_enter_bottom_top_top_1_text_1{
+    font-family: interbold;
+
+font-size: 11px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #FFFFFF;
+margin-left: 9px;
+margin-top: 5px;
+width: 150px;
+/* background-color: red; */
+display: flex;
+flex-direction: row;
+overflow:hidden;white-space:wrap;text-overflow:ellipsis;
+
+}
+
+.garage_enter_bottom_top_top_1_text_2{
+    font-family: interbold;
+
+font-size: 9px;
+font-weight: 500;
+line-height: 13px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #767676;
+margin-left:  9px;
+margin-top: -5px;
+
+}
+
+
+.garage_enter_bottom_top_top_2{
+    width: 116px;
+height: 35px;
+/* background-color: red; */
+border-radius: 4px;
+margin-left: 25px;
+margin-top: 10px;
+display: flex;
+flex-direction: row;
+
+}
+
+.garage_enter_bottom_top_top_2_1{
+    width: 23px;
+    border-radius: 50%;
+    height: 23px;
+    background-color:#FFB800;
+
+border: 3px solid #14121254;
+margin-top: 4px;
+margin-right: 8px;
+
+
+
+
+}
+
+.garage_enter_bottom_top_top_2_2{
+    font-family: interbold;
+
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 6.2Px;
+    color: #6F6F6F;
+}
+
+
+.garage_enter_bottom_top_center{
+    position: relative;
+    width: 99%;
+    height: 210px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    display:inline-block;
+    vertical-align:middle;
+    margin-top:-35px;
+    margin-left: 5px;
+    z-index: 1;
+}
+
+.garage_enter_bottom_top_center img{
+    width: 99%;
+    height: 210px;
+    z-index: -1;
+
+    /* border-radius: 50%; */
+    /* object-fit: none; */
+}
+
+.garage_enter_bottom_top_bottom{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    margin-left: 10px;
+    margin-top: -70px;
+    z-index: 3;
+}
+
+.garage_enter_bottom_top_bottom_1{
+    font-family: akira;
+
+font-size: 14px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #8B8B8B;
+margin-left: 9px;
+margin-top: 5px;
+
+}
+
+.garage_enter_bottom_top_bottom_2{
+    font-family: akira;
+
+font-size: 10px;
+font-weight: 500;
+line-height: 13px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: left;
+color: #343434;
+margin-left:  9px;
+margin-top: -2px;
+
+}
+
+.garage_settings_changepart_center_vehiclelogo2{
+    position: relative;
+    width: 200px;
+height: 95px;
+/* background-color: red; */
+border-radius: 4px;
+display:inline-block;
+vertical-align:middle;
+margin-top: -230px;
+z-index: 3;
+margin-left: 65px;
+
+
+}
+
+.garage_settings_changepart_center_vehiclelogo2 img{
+    width: 85%;
+/* height: 95px; */
+    z-index: -1;
+    object-fit:scale-down;
+    /* object-fit: none; */
+    /* border-radius: 50%; */
+    /* object-fit: none; */
+}
+
+
+.garage_enter_bottom_top2{
+    width: 310px;
+    height: 214px;
+    margin-left: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #070707, #070707),
+    linear-gradient(0deg, #111111, #111111);
+    border: 3px solid #1711114d;
+     cursor: pointer;
+}
+
+.garage_enter_bottom_top2:hover{
+    border: 3px solid #a79e9e4d;
+}
+
+.garage_enter_bottom_top2_centertext{
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    margin-top: -120px;
+}
+
+.garage_enter_bottom_top2_centertext_1{
+    font-family: akira;
+
+font-size: 21px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: center;
+color: #8B8B8B;
+margin-left: 9px;
+margin-top: 5px;
+
+}
+
+.garage_enter_bottom_top2_centertext_2{
+    font-family: akira;
+
+font-size: 9px;
+font-weight: 500;
+line-height: 13px;
+letter-spacing: 0em;
+text-transform: uppercase;
+text-align: center;
+color: #343434;
+margin-left:  9px;
+margin-top: 0px;
+
+}
+
+
+
+
+/* <!-- ------------------------------------------------- vehicle info part ----------------------------------------------------  --> */
+
+.vehicleinfo{
+    height: 100%;
+    opacity: 0.88;
+    /* background: #00000076; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+
+
+.garage_settings_changepart_center_vehiclelogo4{
+    position: absolute;
+    width: 216px;
+height: 125px;
+/* background-color: red; */
+border-radius: 4px;
+display:inline-block;
+vertical-align:middle;
+margin-top: -167px;
+z-index: 3;
+margin-left: 55px;
+
+
+}
+
+.garage_settings_changepart_center_vehiclelogo4 img{
+    max-width: 216px;
+    max-height: 125px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: contain;
+    /* object-fit: none; */
+    /* border-radius: 50%; */
+    /* object-fit: none; */
+}
+
+
+
+#vehicleinfo_item1 {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height:50px;
+    margin-top: 9px;
+    /* background-color: blue; */
+    margin-right: 10px;
+}
+
+
+.vehicleinfo_item1_icon{
+    position: absolute;
+    transform: rotate(180deg);
+
+}
+
+
+
+#vehicleinfo_item2 {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height:50px;
+    margin-top: 9px;
+    /* background-color: blue; */
+    margin-right: 10px;
+}
+
+#vehicleinfo_item3 {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height:50px;
+    margin-top: 9px;
+    /* background-color: blue; */
+    margin-right: 10px;
+}
+
+
+/* ---------------------------- doktor bune -----------------  */
+
+.spechmain{
+    position: absolute;
+    /* perspective: 35em; */
+    width: 400px;
+    padding-left: 30px;
+    /* margin-top: -50px; */
+   
+}
+
+
+.bubble{
+    background-color: #5f5e608c;
+    border-radius: 2px;
+    /* box-shadow: 0 0 6px #B2B2B2; */
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+    font-family: deneme;
+    font-size: 14px;
+    font-weight: 500;
+    border-left: 2px solid #8fc92b;
+    color: rgb(203, 198, 198);
+    
+}
+
+
+.bubblebuttonmain{
+    position: absolute;
+    width: 100px;
+    /* background-color: red; */
+    margin-left: 140px;
+    margin-top: 7px;
+
+
+}
+
+.bubblebutton{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #5f5e608c;
+    font-family: deneme;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+
+/* -------------------------- drawtext ----------------------  */
+
+.drwatext{
+    position: absolute;
+    left:1%;
+    top: 55%;
+    color: rgba(255, 255, 255, 0.629);
+    padding: 10px 30px;
+    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background: radial-gradient(11.31% 13.03% at 100.00% -0.00%, rgba(226, 49, 49, 0.18) 0%, rgba(226, 49, 49, 0.00) 100%), radial-gradient(109.51% 92.36% at -5.60% 129.35%, rgba(0, 133, 255, 0.20) 0%, rgba(0, 133, 255, 0.00) 100%), linear-gradient(0deg, rgba(66, 68, 70, 0.314) 0%, rgba(15, 22, 32, 0.75) 100%), rgba(0, 0, 0, 0.90); 
+  /* border: 2px dotted rgba(188, 111, 33, 0.664); */
+  font-family: 'Heebo', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+}
+
+.drawtext_icon{
+    position: absolute;
+    left: 0;
+    margin-top: -20px;
+}
+
+
+/* ---------------------------- impound ---------------------------------------------  */
+
+.garageimpound{
+    position: absolute;
+    width: 500px;
+    height: 800px;
+    top: 138px;
+    right: 1%;
+    border-radius: 23px;
+    
+    border: 4px solid #121212;
+    background-color: #070707;
+    /* padding: 25px; */
+    /* display: none; */
+}
+
+
+    
+
+.garageimpound_top{
+    width: 97%;
+    height: 220px;
+    /* background-color: red; */
+    display: flex;
+    margin-left: 10px;
+
+    border-bottom: 2px solid rgba(73, 73, 73, 0.438);
+}
+
+.garageimpound_top_img{
+    width: 264px;
+    height: 171px;
+
+    border-radius: 11px;
+    overflow: hidden;
+    
+    display:inline-block;
+    vertical-align:middle;
+    margin-left: 10px;
+    margin-top: 25px;
+    opacity: 0.7;
+    
+}
+
+.garageimpound_top_img img{
+    width: 354px;
+    height: 171px;
+    border-radius: 11px;
+    border: 1px solid rgb(20, 19, 19);
+    image-rendering: pixelated;
+    
+}
+
+
+.garageimpound_top_text{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+   margin-left: 15px;
+   margin-top: 10px;
+   /* background-color: red; */
+  
+}
+
+.garageimpound_top_text_1{
+    position: absolute;
+    width: 200px;
+    height: 154px;
+    margin-top: 20px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+
+    font-family: intermedium;
+font-size: 17px;
+font-style: normal;
+font-weight: 900;
+margin-left: 5px;
+color: #FFF;
+line-height: normal;
+text-transform: uppercase;
+    
+}
+
+
+.garageimpound_top_text_2{
+    position: absolute;
+    width: 35%;
+    height: 85px;
+    margin-top: 50px;
+  
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    /* border-bottom: 2px solid #454545;; */
+    
+    
+}
+
+.garageimpound_list{
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid red; */
+    margin-left: 12px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    white-space: normal;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: auto;
+
+}
+
+.garageimpound_list_item{
+    width: 100%;
+    height: 50px;
+    background-color: #0e0c0c;
+    border: 1px solid rgba(138, 135, 135, 0.164);
+    border-radius: 5px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    
+    /* margin-left: 80px; */
+
+}
+
+.garageimpound_list_item:hover{
+    border: 1px solid rgba(216, 210, 210, 0.171);
+
+
+}
+
+
+.garageimpound_list_item_1{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    /* background-color: red; */
+    margin: 9px;
+    display: flex;
+}
+
+.garageimpound_list_item_1_1{
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-left: 5px;
+    opacity: 0.9;
+}
+
+.garageimpound_list_item_1_2{
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-left: 5px;
+    opacity: 0.9;
+}
+
+.garageimpound_list_item_2{
+    position: relative;
+    width: 150px;
+    height: 30px;
+    /* background-color: red; */
+    margin-top: -39px;
+    margin-left: 300px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.garageimpound_list_item_2_1{
+    /* width: 70%; */
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    /* background-color: #0075FF; */
+    margin-top: 6px;
+    margin-left: 5px;
+    /* margin-left: 2px; */
+    opacity: 0.9;
+    /* text-align: center; */
+    /* margin-left: auto; */
+    margin-right: 5px;
+   
+   
+}
+
+
+.item_ekle {
+   color: rgb(90, 88, 88); font-size:15px; margin:6px; opacity:1.0;
+}
+
+.item_ekle2 {
+    color: rgb(34, 223, 17); font-size:10px;  opacity:1.0;
+    
+    /* margin-left: auto; */
+    margin-top: 6px;
+ }
+
+.garageimpound_list::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+.garageimpound_list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+.garageimpound_list::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+.garageimpound_list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+
+.garageimpound_load{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin: -76px 0 0 -76px;
+    border: 10px solid #333232;
+    border-radius: 50%;
+    border-top: 10px solid #d3d7db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+  
+
+.garageimpound_modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 400px;
+    height: 150px;
+    background-color: #05050594;
+    margin: -96px 0 0 -226px;
+    border: 2px solid #333232;
+    border-radius: 3%;
+}
+
+.garageimpound_modal_top_text{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.garageimpound_modal_center_text{
+    position: relative;
+    width: 85%;
+    margin-top: 10px;
+    text-align: center;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 25px;
+    opacity: 0.29;
+    text-transform:unset;
+}
+
+.garageimpound_modal_button{
+    position: relative;
+    /* width: 55%; */
+    /* background-color: red; */
+    top: 30px;
+    text-align: center;
+}
+
+.garageimpound_modal_button_1{
+    /* position: relative; */
+    display: inline;
+    padding: 5px 10px;
+    background-color: rgb(57, 102, 46);
+    text-align: center;
+    font-family: intermedium;
+    color: #ffffffd2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.garageimpound_modal_button_2{
+    /* position: relative; */
+    display: inline;
+    padding: 5px 10px;
+    background-color: rgb(102, 48, 46);
+    text-align: center;
+    font-family: intermedium;
+    color: #ffffffd2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+
+/* ---------------------------------------------- job vehicle buy part ---------------------------- */
+
+
+.vehjobpart_buy{
+    height: 100%;
+    /* opacity: 0.88; */
+    background: radial-gradient(ellipse at center, rgba(1, 1, 1, 0.267), rgba(1, 1, 1, 1));
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    display: none;
+}
+
+
+.vehjobpart_buy_left{
+    position: fixed;
+    left: 40.2%;
+    bottom: 4%;
+
+   
+    cursor: pointer;
+}
+
+.vehjobpart_buy_left_menu{
+    height: 400px;
+    width: 200px;
+    position: fixed;
+    z-index: 5;
+    top: 35%;
+    left: 1%;
+    /* background-color: #111111cc; */
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* border-radius: 10px; */
+}
+
+.vehjobpart_buy_left_menu_1{
+    position: relative;
+    width: 100%;
+    height:300px;
+    background-color: #111110;
+    box-shadow: 0 0px 2px 0 #444443, 0 6px 20px 0 #0f0f0f;
+    /* border-radius: 10px; */
+    
+}
+
+.vehjobpart_buy_left_menu_1_item{
+    display: block;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-left: 1px solid rgba(0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0);
+    /* margin-top: 10px; */
+    font-family: interbold;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgba(165, 163, 163, 0.719);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
+}
+
+.vehjobpart_buy_left_menu_1_item:hover{
+    background-color: #232a3b85;
+
+}
+
+
+.vehjobpart_buy_right{
+    position: fixed;
+    right: 41%;
+    bottom: 4%;
+    /* width: 70px; */
+    /* height: 70px; */
+    /* clip-path: polygon(100% 0%,100% 50%,100% 100%,45% 72%,12% 54%,51% 30%); */
+
+    /* transform: rotate(-180deg); */
+    cursor: pointer;
+}
+
+
+
+.arrow {
+    --arrow-size: 3.5em;
+    --arrow-color: rgba(255, 255, 255, 0.644);
+    --arrow-color-hover: rgba(129, 124, 124, 0.24);
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    overflow: hidden;
+  }
+  .arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc( var(--arrow-size) * .7071);
+    height: calc( var(--arrow-size) * .7071);
+    border-top: calc( var(--arrow-size) / 5 ) solid var(--arrow-color);
+    transition: all 150ms ease-in-out;
+  }
+  .arrow.left::after {
+    left: calc( var(--arrow-size) / 5 );
+    border-left: calc( var(--arrow-size) / 5 ) solid var(--arrow-color);
+    transform-origin: top left;
+    rotate: -45deg;
+  }
+  .arrow.left:hover::after {
+    box-shadow: calc( var(--arrow-size) / -8 ) calc( var(--arrow-size) / -8 ) 0 var(--arrow-color);
+  }
+  .arrow.right::after {
+    right: calc( var(--arrow-size) / 5 );
+    border-right: calc( var(--arrow-size) / 5 ) solid var(--arrow-color);
+    transform-origin: top right;
+    rotate: 45deg;
+  }
+  .arrow.right:hover::after {
+    box-shadow: calc( var(--arrow-size) / 8 ) calc( var(--arrow-size) / -8 ) 0 var(--arrow-color);
+  }
+  
+  .arrow.left::after, .arrow.right::after {
+    border-color: var(--arrow-color-hover);
+  }
+  a:hover .arrow.left::after {
+    box-shadow: calc( var(--arrow-size) / -8 ) calc( var(--arrow-size) / -8 ) 0 var(--arrow-color);
+  }
+  a:hover .arrow.right::after {
+    box-shadow: calc( var(--arrow-size) / 8 ) calc( var(--arrow-size) / -8 ) 0 var(--arrow-color);
+}
+  
+
+.vehjobpart_buy_bottom{
+    position: fixed;
+    left: 43%;
+    bottom: 5%;
+    /* background: linear-gradient(225deg, #0707073d 0%, #2F2F2F 100%); */
+    border-radius: 5px;
+    width: 250px;
+    height: 70px;
+    /* border: 2px solid rgb(112, 111, 111); */
+}
+
+.vehjobpart_buy_bottom_button{
+    position: absolute;
+
+    width: 250px;
+    height: 70px;
+    background-color: #111110;
+    box-shadow: 0 0px 2px 0 #444443, 0 6px 20px 0 #0f0f0f;
+    text-align: center;
+    right: 6%;
+    bottom: 6%;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline;
+}
+
+.vehjobpart_buy_bottom_button:hover{
+    background-color: #242422;
+    box-shadow: 0 0px 2px 0 #8d8d8d7e, 0 6px 20px 0 #1b161681;
+}
+
+
+.vehjobpart_buy_bottom_top_text{
+    position: relative;
+    text-align: center;
+    font-family: intermedium;
+    color: #ffffffd2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+
+.vehjobpart_buy_bottom_bt_text{
+    position: relative;
+    text-align: center;
+    font-family: intermedium;
+    color: #ffffffd2;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.4;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+.buypart{
+    position: absolute;
+width: 1398px;
+height: 768px;
+top: 135px;
+left: 261px;
+border-radius: 23px;
+
+border: 4px solid #121212;
+background-color: #070707;
+}
+
+.buypart_top{
+    width: 100%;
+    height: 150px;
+    /* background-color: red; */
+    display: flex;
+}
+
+.buypart_top_img{
+    width: 524px;
+    height: 111px;
+
+    border-radius: 11px;
+    overflow: hidden;
+
+    display:inline-block;
+    vertical-align:middle;
+    margin-left: 20px;
+    margin-top: 25px;
+    
+}
+
+.buypart_top_img img{
+    width: 524px;
+    height: 111px;
+    border-radius: 11px;
+    image-rendering: pixelated;
+    
+}
+
+
+.buypart_top_text{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+   margin-left: 35px;
+  
+}
+
+.buypart_top_text_1{
+    position: absolute;
+    width: 700px;
+    height: 154px;
+    margin-top: 20px;
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+
+    font-family: intermedium;
+font-size: 30px;
+font-style: normal;
+font-weight: 900;
+margin-left: 5px;
+color: #FFF;
+line-height: normal;
+text-transform: uppercase;
+    
+}
+
+
+.buypart_top_text_2{
+    position: absolute;
+    width: 45%;
+    height: 85px;
+    margin-top: 60px;
+  
+    z-index: 1;
+    /* background-color: beige; */
+    display: flex;
+    margin-left: 5px;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.28;
+    /* border-bottom: 2px solid #454545;; */
+    
+    
+}
+
+.buypart_top_icon{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 15px;
+    top: 12px;
+    /* background-color: beige; */
+}
+
+.buypart_top_icon_1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #262525;
+    cursor: pointer;
+    margin-bottom: 15px;
+    cursor: pointer;
+  
+}
+
+.buypart_top_icon_1:hover{
+
+    background-color: #FFFFFF;
+}
+
+.buypart_bottom{
+    width: 97%;
+    height: 590px;
+    margin-left: 20px;
+    border-radius: 11px;
+    background: #0E0E0E;
+    display: flex;
+    flex-direction: row;
+    white-space: normal;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: auto;
+  
+    /* overflow: auto; */
+
+}
+
+.headerjob{
+    position: relative;
+    /* width: 300px; */
+    max-width: 300px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(209, 38, 181, 0.699);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    /* border-radius: 8px 8px 0px 0px; */
+    color: rgba(255, 255, 255, 0.623);
+}
+
+
+.jobbuy_load{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin: -76px 0 0 -76px;
+    border: 10px solid #333232;
+    border-radius: 50%;
+    border-top: 10px solid #d3d7db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+
+
+.garage_jobenter_bottom_top{
+    /* position:absolute; */
+    width: 310px;
+    height: 214px;
+    margin-left: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #070707, #070707),
+linear-gradient(0deg, #111111, #111111);
+border: 3px solid #1711114d;
+cursor: pointer;
+
+}
+
+
+.secondvehicle{
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    top: 20%;
+    left: 38%;
+    border-radius: 23px;
+    
+    border: 4px solid #121212;
+    background-color: #070707;
+    display: none;
+}
+
+.secondvehicle_top{
+    position: relative;
+    width: 80%;
+    height: 30px;
+    border-radius: 23px;
+    top: 2%;
+    /* background-color: rgba(243, 239, 239, 0.582); */
+    text-align: center;
+    font-family: intermedium;
+    color: #ddd4d4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 40px;
+    display: block;
+}
+
+.secondvehicle_center{
+    position: relative;
+    width: 80%;
+    height: 70px;
+    /* background-color: red; */
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+.secondvehicle_center_1{
+    text-align: center;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.secondvehicle_center_2{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(109, 108, 108, 0.582);
+
+    border: 1px solid #121212;
+    outline: none;
+    color: rgba(255, 255, 255, 0.479);
+    margin-top: 17px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.secondvehicle_center_3{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(109, 108, 108, 0.582);
+
+    border: 1px solid #121212;
+    outline: none;
+    color: rgba(255, 255, 255, 0.479);
+
+    margin-top: 17px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.secondvehicle_button{
+    position: relative;
+    width: 80%;
+    height: 40px;
+    /* background-color: red; */
+    margin-top: 25px;
+    margin-left: 40px;
+
+}
+
+
+
+/* CSS */
+.button-8 {
+    width: 100%;
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #e4e6e7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: intermedium;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b4b6b8;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(56, 83, 114, 0.15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #5c5f61;
+}
+
+.secondvehicle_bottom{
+    position: relative;
+    width: 80%;
+    height: 170px;
+    background-color: red;
+    margin-top: 45px;
+    margin-left: 40px;
+    display:inline-block;
+    vertical-align:middle;
+    opacity: 0.7;
+}
+
+.secondvehicle_bottom img{
+    width: 100%;
+    height: 100%;
+   object-fit:cover;
+
+}
+
+
+.vehsellinfo{
+    position: absolute;
+
+    width: 262px;
+    height: 435px;
+    border-radius: 13px;
+    /* transform: perspective(1500px) rotateY(-25deg);  */
+    /* zoom: 0.8; */
+    top: 30%;
+    left: 5%;
+    
+    transform: perspective(1500px) rotateY(15deg);
+    background: linear-gradient(202.53deg, #1C1C1C 0%, #050505 100%);
+}
+
+
+.vehsellinfo_top{
+    /* position:absolute; */
+    width: 90%;
+    height: 160px;
+    margin-left: 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #070707, #070707),
+linear-gradient(0deg, #111111, #111111);
+border: 3px solid #1711114d;
+    
+z-index: 2;
+
+}
+
+.vehsellinfo_top_center{
+    position: relative;
+    width: 99%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    display:inline-block;
+    vertical-align:middle;
+    /* margin-top:-15px; */
+    margin-left: 5px;
+    z-index: 0;
+}
+
+.vehsellinfo_top_center img{
+    width: 99%;
+    height: 100%;
+    z-index: -1;
+    /* background-color: blanchedalmond; */
+
+    /* border-radius: 50%; */
+    object-fit: none;
+}
+
+
+.vehsellinfo_top_center_vehlogo{
+    position: absolute;
+    width: 186px;
+height: 130px;
+/* background-color: red; */
+border-radius: 4px;
+display:inline-block;
+vertical-align:middle;
+margin-top: -150px;
+z-index: 3;
+margin-left: 25px;
+
+
+}
+
+.vehsellinfo_top_center_vehlogo img{
+    max-width: 186px;
+    max-height: 130px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: contain;
+    /* object-fit: none; */
+    /* border-radius: 50%; */
+    /* object-fit: none; */
+}
+
+.vehsellinfo_bottom{
+    /* position:absolute; */
+    width: 90%;
+    height: 160px;
+    margin-left: 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+
+    opacity: 0.7;
+z-index: 2;
+
+}
+
+
+.vehsellinfo_bottom_text{
+    background: linear-gradient(-270deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+    font-family: interblack;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#747171;
+    display: flex;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px dotted rgb(51, 50, 50);
+
+}
+
+#vehicleinfosell1 {
+    position: relative;
+    right: 0;
+    width: 35px;
+    height:35px;
+    /* margin-top: 9px; */
+    /* background-color: blue; */
+    margin-right: 20px;
+    margin-left: 30px;
+
+
+}
+#vehicleinfosell2 {
+    position: relative;
+    right: 0;
+    width: 35px;
+    height:35px;
+    /* margin-top: 9px; */
+    /* background-color: blue; */
+    margin-right: 20px;
+}
+
+#vehicleinfosell3 {
+    position: relative;
+    right: 0;
+    width: 35px;
+    height:35px;
+    /* margin-top: 9px; */
+    /* background-color: blue; */
+    margin-right: 20px;
+}
+
+.vehsellinfo_bottom_btngrp {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.vehsellinfo_bottom_button{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #4b286e8c;
+    font-family: intermedium;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    
+}
+
+.vehsellinfo_bottom_button:hover{
+    background-color: #6462668c;
+
+}
+
+.sellconfirmpart{
+    height: 100%;
+    /* opacity: 0.88; */
+    background: #000000e2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+
+.sellconfirmpart_modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 400px;
+    height: 150px;
+    background-color: #05050594;
+    margin: -96px 0 0 -226px;
+    border: 2px solid #333232;
+    border-radius: 3%;
+}
+
+.sellconfirmpart_modal_top_text{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.sellconfirmpart_modal_center_text{
+    position: relative;
+    width: 85%;
+    margin-top: 10px;
+    text-align: center;
+    font-family: intermedium;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 25px;
+    opacity: 0.29;
+    text-transform:unset;
+}
+
+.sellconfirmpart_modal_button{
+    position: relative;
+    /* width: 55%; */
+    /* background-color: red; */
+    top: 30px;
+    text-align: center;
+}
+
+.sellconfirmpart_modal_button_1{
+    /* position: relative; */
+    display: inline;
+    padding: 5px 10px;
+    background-color: rgb(57, 102, 46);
+    text-align: center;
+    font-family: intermedium;
+    color: #ffffffd2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.sellconfirmpart_modal_button_2{
+    /* position: relative; */
+    display: inline;
+    padding: 5px 10px;
+    background-color: rgb(102, 48, 46);
+    text-align: center;
+    font-family: intermedium;
+    color: #ffffffd2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+
+
+.sell_load{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin: -76px 0 0 -76px;
+    border: 10px solid #333232;
+    border-radius: 50%;
+    border-top: 10px solid #d3d7db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+
+@media screen and (max-width: 1600px) and (min-width: 1460px) and (max-height: 900px) {
+  .garage_create{
+    zoom: 0.9;
+  }
+
+  .garage_buy{
+    zoom: 0.9;
+  }
+
+  .garage_enter{
+    zoom: 0.9;
+
+  }
+
+  .garageimpound{
+    zoom: 0.9;
+
+  }
+
+  .secondvehicle{
+    zoom: 0.9;
+    
+  }
+
+}
+
+
+@media screen and (max-width: 1440px) and (min-width: 1400px) {
+    .garage_create{
+      zoom: 0.8;
+    }
+  
+    .garage_buy{
+      zoom: 0.8;
+    }
+  
+    .garage_enter{
+      zoom: 0.8;
+  
+    }
+  
+    .garageimpound{
+      zoom: 0.8;
+  
+    }
+  
+    .secondvehicle{
+      zoom: 0.8;
+      
+    }
+  
+}
+
+
+@media screen and (max-width: 1366px) and (min-width:1300px) {
+    .garage_create{
+      zoom: 0.7;
+    }
+  
+    .garage_buy{
+      zoom: 0.7;
+    }
+  
+    .garage_enter{
+      zoom: 0.7;
+  
+    }
+  
+    .garageimpound{
+      zoom: 0.7;
+  
+    }
+  
+    .secondvehicle{
+      zoom: 0.7;
+      
+    }
+  
+}

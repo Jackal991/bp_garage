@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="garageall" style="display: none;"> 
+
+        <!-- <div class="garageall_resim">
+            <img src="mm.png" alt="" srcset="" style="opacity: 0.1;">
+        </div> -->
+
+        <!-- ----------------------------------------------------- garage buy -------------------------------------------------------------- -->
+        <div class="garage_buy" >
+            <div class="garage_buy_left">
+                <div class="garage_buy_left_1">
+                    <div class="garage_buy_left_1_img">
+                       <img  src="https://d1lss44hh2trtw.cloudfront.net/assets/article/2023/02/16/gta-online-gets-new-multi-floor-eclipse-boulevard-garage-free-to-gta-members_feature.jpg" alt="" id="buyimageid" >
+                    </div>
+
+                    <div class="garage_buy_left_1_kalp">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 9px; margin-top:12px;" width="22" height="19" viewBox="0 0 22 19" fill="none"> <path d="M11.1628 3.56036C17.9664 -6.70528 31.7051 7.33834 11.1628 19L11.1628 3.56036Z" fill="#AFAFAF"/> <path d="M10.8372 3.56036C4.03358 -6.70528 -9.70513 7.33834 10.8372 19L10.8372 3.56036Z" fill="#AFAFAF"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.16072 0.002089C7.12332 -0.0537635 9.27394 1.00732 10.9733 3.55063L11 3.59048L11 19L10.7603 18.865C0.617761 13.154 -1.15678 6.79879 0.59041 3.07978C1.46045 1.22784 3.20087 0.0578633 5.16072 0.002089ZM10.6792 18.453L10.6792 3.68624C9.03145 1.24252 6.98846 0.267862 5.16994 0.319614C3.33886 0.371724 1.70326 1.46408 0.881253 3.21378C-0.742627 6.6703 0.796607 12.8047 10.6792 18.453ZM11.3208 3.68624L11.3208 18.453C21.2034 12.8047 22.7426 6.6703 21.1187 3.21378C20.2967 1.46408 18.6611 0.371724 16.8301 0.319614C15.0115 0.267862 12.9685 1.24252 11.3208 3.68624ZM21.4096 3.07978C23.1568 6.79879 21.3822 13.154 11.2397 18.865L11 19L11 3.59048L11.0267 3.55063C12.7261 1.00732 14.8767 -0.0537635 16.8393 0.002089C18.7991 0.0578633 20.5395 1.22784 21.4096 3.07978Z" fill="#AFAFAF"/> </svg>
+                    </div>
+                </div>
+
+                <div class="garage_buy_left_2">
+                    <div class="garage_buy_left_2_img">
+                        <img  src="under.png" alt="" >
+                    </div>
+                    <div class="garage_buy_left_2_info" id="buyamountid">$250,000</div>
+                    <div class="garage_buy_left_2_info2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 18 21" fill="none"> <path d="M18 9C18 13.9706 9 21 9 21C9 21 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="white"/> <circle cx="9" cy="9" r="4" fill="#101010"/> </svg>
+
+                        <div class="garage_buy_left_2_info2_txt" id="buyadressid">Winewood 223-442 street.</div>
+                    </div>
+
+                    <div class="garage_buy_left_2_info3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 22 17" fill="none"> <path d="M6.7349 3.21972C6.09896 4.02638 5.82739 4.74227 5.70101 5.87928C5.65914 6.25599 5.42069 6.58581 5.06646 6.72064C4.37546 6.98364 3.65563 6.40477 3.80843 5.68137C4.32435 3.23893 5.08175 2.08254 6.69298 1.15591C6.87653 1.05035 7.08668 1 7.29842 1H15.0787C15.3372 1 15.5915 1.07553 15.8012 1.22665C17.2993 2.3064 18.0357 3.42019 18.4486 5.74516C18.575 6.45694 17.8639 7.00407 17.1882 6.74692C16.7994 6.59893 16.556 6.21854 16.5397 5.80282C16.4915 4.57326 16.1342 3.8771 15.3006 3.09558C15.0762 2.88519 14.7752 2.77918 14.4676 2.77918H7.68647C7.31869 2.77918 6.96259 2.93091 6.7349 3.21972Z" fill="white" stroke="white"/> <path d="M1 10.1294C1 9.75036 1.30725 9.44312 1.68626 9.44312C3.07596 9.44312 4.20253 10.5697 4.20253 11.9594V14.7044C4.20253 15.4969 3.5601 16.1393 2.76763 16.1393H2.60127C1.71691 16.1393 1 15.4224 1 14.5381V10.1294Z" fill="white"/> <path d="M21.0886 10.1294C21.0886 9.75036 20.7814 9.44312 20.4024 9.44312C19.0127 9.44312 17.8861 10.5697 17.8861 11.9594V14.7044C17.8861 15.4969 18.5285 16.1393 19.321 16.1393H19.4874C20.3717 16.1393 21.0886 15.4224 21.0886 14.5381V10.1294Z" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63927 13.3735H17.3038C19.2333 13.3735 20.9431 11.8093 20.9431 9.87978V9.00637C20.9431 7.07687 19.2333 5.5127 17.3038 5.5127H4.63927C2.70977 5.5127 1.1456 7.07687 1.1456 9.00637V9.87978C1.1456 11.8093 2.70977 13.3735 4.63927 13.3735ZM6.67725 9.73421C6.67725 10.6186 5.96033 11.3355 5.07598 11.3355C4.19162 11.3355 3.47471 10.6186 3.47471 9.73421C3.47471 8.84986 4.19162 8.13295 5.07598 8.13295C5.96033 8.13295 6.67725 8.84986 6.67725 9.73421ZM7.55066 9.87978C7.55066 10.523 8.07205 11.0443 8.71522 11.0443H13.0823C13.7255 11.0443 14.2469 10.523 14.2469 9.87978C14.2469 9.23662 13.7255 8.71523 13.0823 8.71523H8.71522C8.07205 8.71523 7.55066 9.23662 7.55066 9.87978ZM17.0127 8.13295C16.1283 8.13295 15.4114 8.84986 15.4114 9.73421C15.4114 10.6186 16.1283 11.3355 17.0127 11.3355C17.897 11.3355 18.614 10.6186 18.614 9.73421C18.614 8.84986 17.897 8.13295 17.0127 8.13295Z" fill="white"/> <path d="M17.3038 13.3735H4.63927M17.3038 13.3735C19.2333 13.3735 20.9431 11.8093 20.9431 9.87978M17.3038 13.3735H17.4494C19.3789 13.3735 20.9431 11.8093 20.9431 9.87978V9.87978M4.63927 13.3735C2.70977 13.3735 1.1456 11.8093 1.1456 9.87978M4.63927 13.3735V13.3735C2.70977 13.3735 1.1456 11.8093 1.1456 9.87978V9.87978M1.1456 9.87978V9.00637M1.1456 9.00637C1.1456 7.07687 2.70977 5.5127 4.63927 5.5127M1.1456 9.00637V9.00637C1.1456 7.07687 2.70977 5.5127 4.63927 5.5127V5.5127M4.63927 5.5127H17.3038M17.3038 5.5127C19.2333 5.5127 20.9431 7.07687 20.9431 9.00637M17.3038 5.5127H17.4494C19.3789 5.5127 20.9431 7.07687 20.9431 9.00637V9.00637M20.9431 9.00637V9.87978M18.614 9.73421V9.73421C18.614 8.84986 17.897 8.13295 17.0127 8.13295V8.13295C16.1283 8.13295 15.4114 8.84986 15.4114 9.73421V9.73421C15.4114 10.6186 16.1283 11.3355 17.0127 11.3355V11.3355C17.897 11.3355 18.614 10.6186 18.614 9.73421ZM8.71522 8.71523H13.0823C13.7255 8.71523 14.2469 9.23662 14.2469 9.87978V9.87978C14.2469 10.523 13.7255 11.0443 13.0823 11.0443H8.71522C8.07205 11.0443 7.55066 10.523 7.55066 9.87978V9.87978C7.55066 9.23662 8.07205 8.71523 8.71522 8.71523ZM5.07598 8.13295V8.13295C5.96033 8.13295 6.67725 8.84986 6.67725 9.73421V9.73421C6.67725 10.6186 5.96033 11.3355 5.07598 11.3355V11.3355C4.19162 11.3355 3.47471 10.6186 3.47471 9.73421V9.73421C3.47471 8.84986 4.19162 8.13295 5.07598 8.13295Z" stroke="white"/> </svg>
+                        <div class="garage_buy_left_2_info3_txt" id="buypartcountid">12</div>
+                        <svg style="margin-left: 30px; margin-top:-1px;" width="15px" height="15px" viewBox="0 -0.5 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-crown"> <title>1065</title> <defs> </defs> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g transform="translate(1.000000, 0.000000)" fill="white"> <path d="M12.971,15.23 C12.971,15.653 12.554,15.998 12.039,15.998 L3.951,15.998 C3.436,15.998 3.019,15.653 3.019,15.23 L3.019,14.78 C3.019,14.358 3.436,14.013 3.951,14.013 L12.039,14.013 C12.554,14.013 12.971,14.358 12.971,14.78 L12.971,15.23 L12.971,15.23 Z" class="si-glyph-fill"> </path> <path d="M12.465,12.979 L3.547,12.979 L1.421,5.365 L2.562,4.656 L5.573,8.907 L7.345,3.042 L8.763,3.042 L10.357,9.262 L13.545,4.656 L14.591,5.365 L12.465,12.979 Z" class="si-glyph-fill"> </path> <circle cx="14.968" cy="2.968" r="0.968" class="si-glyph-fill"> </circle> <circle cx="7.964" cy="0.964" r="0.964" class="si-glyph-fill"> </circle> <ellipse cx="0.983" cy="2.974" rx="0.983" ry="0.974" class="si-glyph-fill"> </ellipse> </g> </g> </svg>
+                        <div class="garage_buy_left_2_info3_txt">NONE</div>
+
+                    </div>
+
+                    <div class="garage_buy_left_2_info4">
+                        <div id="starsid" class="othersbutton"style="clear: both; color:#df9;">
+                            <span class="fa fa-star leftcheck fa-lg" ></span>
+                            <span class="fa fa-star leftcheck fa-lg" ></span>
+                            <span class="fa fa-star checked fa-lg" style="margin-right:5px;"></span>
+                            <span class="fa fa-star checked fa-lg" style="margin-right:5px;"></span>
+                            <span class="fa fa-star checked fa-lg" style="margin-right:5px;"></span>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="garage_buy_right">
+                <div class="garage_buy_right_top1" id="buygaragenameid">
+                    JOSH BERNSTEIN’S GARAGE
+                </div>
+
+                <div class="garage_buy_right_top2">
+                    Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
+                </div>
+
+                <div class="garage_buy_right_top3">
+                    <div style="width: 8px; height:8px; background-color:#7C7C7C; border-radius:50%;"></div>
+                    <div style="margin-top: -2px; margin-left:3px;">Garage Owner</div>
+
+                </div>
+
+                <div class="garage_buy_right_top4">
+                    <div class="garage_buy_right_top4_1"></div>
+                    <div class="garage_buy_right_top4_2">
+                        <div class="garage_buy_right_top4_2_1">NONE</div>
+                        <div class="garage_buy_right_top4_2_2">NONE</div>
+                    </div>
+
+                    <div class="garage_buy_right_top4_3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="40" viewBox="0 0 28 35" fill="none"> <rect y="14" width="28" height="21" rx="4" fill="white"/> <rect x="5" y="7" width="4" height="21" rx="2" fill="white"/> <rect x="19" y="7" width="4" height="21" rx="2" fill="white"/> <path d="M5 9C5 6.61305 5.94821 4.32387 7.63604 2.63604C9.32387 0.948212 11.6131 2.56082e-07 14 0C16.3869 -2.56082e-07 18.6761 0.948211 20.364 2.63604C22.0518 4.32386 23 6.61305 23 9L19.004 9C19.004 7.67285 18.4768 6.40006 17.5384 5.46162C16.5999 4.52318 15.3271 3.99597 14 3.99597C12.6728 3.99597 11.4001 4.52318 10.4616 5.46162C9.52318 6.40006 8.99597 7.67285 8.99597 9L5 9Z" fill="white"/> <rect x="7" y="22" width="14" height="4" rx="2" fill="#FF6464"/> <rect x="12" y="31" width="14" height="4" rx="2" transform="rotate(-90 12 31)" fill="#FF6464"/> </svg>
+                        <div class="garage_buy_right_top4_3_1">
+                            <div class="garage_buy_right_top4_3_1_1">INSURANCE</div>
+                            <div class="garage_buy_right_top4_3_1_2">LOSSANTOS</div>
+                            <div class="garage_buy_right_top4_3_1_3">STATUS: <div style="color: #FF003D; display:flex; margin-left:2px;">DISABLED</div> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="garage_buy_right_top5">
+                    <div class="garage_buy_right_top5_img">
+                        <!-- <img src="try.png" alt=""> -->
+                        <div id="map1" style="height: 300px;"></div>
+
+                    </div>
+                </div>
+
+                <div class="garage_buy_right_top6" onclick="buytogarage()">  
+                    <div style="color: #FFF; font-family: intermedium; font-size: 12px; font-style: normal; font-weight: 600;  text-align: center; text-transform: uppercase; margin-top:9px; margin-left:15px;">Buy To Garage</div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------------------------------------- garage create ------------------------------------------------------------------------------------- -->
+
+        <div class="garage_create" style="display:none;">
+            <div class="garage_create_left">
+                <div class="garage_create_left_img">
+                    <img src="https://d1lss44hh2trtw.cloudfront.net/assets/article/2023/02/16/gta-online-gets-new-multi-floor-eclipse-boulevard-garage-free-to-gta-members_feature.jpg" alt="" srcset="" id="createimg">
+                </div>
+            </div>
+
+
+            <div class="garage_create_right">
+                <div class="garage_create_right_top1">
+                    CREATE MENU
+                </div>
+
+                <div class="garage_create_right_top2">
+                    Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
+                </div>
+
+                <div class="garage_create_right_top3">
+                    <div class="garage_create_right_top3_1" onclick="garagetypefnc('lowgarage')" >
+                        <img src="grp1.png" alt="" style="position:absolute;" id="lowgarage">
+
+                        <div class="demotext">
+                            LOW GARAGE </br>
+                            $15000
+                        </div>
+
+                        <svg  style="margin: 10px; opacity:0.5;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20H3V6L12 4L21 6V20H18M6 20H18M6 20V16M18 20V16M6 12V8L18 8V12M6 12L18 12M6 12V16M18 12V16M6 16H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+                    </div>
+
+                    <div class="garage_create_right_top3_2" onclick="garagetypefnc('midgarage')" >
+                        <img src="grp2.png" alt="" style="position:absolute;" id="midgarage">
+
+                        <div class="demotext">
+                            MID GARAGE </br>
+                            $25000
+                        </div>
+                        <svg style="margin: 10px; opacity:0.5;" width="17px" height="17px" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"> <path d="M454.048,496.067V143.721H57.953v352.346H33.466V512h445.069v-15.933H454.048z M110.975,224.559h290.052v21.156H110.975 V224.559z M110.975,261.648h290.052v21.156H110.975V261.648z M110.975,298.738h290.052v21.155H110.975V298.738z M110.975,335.826 h290.052v21.156H110.975V335.826z M110.975,372.915h290.052v21.156H110.975V372.915z M110.975,410.005h290.052v21.155H110.975 V410.005z M110.975,447.093h290.052v48.974H110.975V447.093z M438.115,496.067h-21.156V224.559h21.156V496.067z M73.886,159.654 h364.23v48.972H73.886V159.654z M73.886,224.559h21.156v271.508H73.886V224.559z"/> <rect x="93.741" y="176.169" width="27.819" height="15.933"/> <rect x="390.45" y="176.169" width="27.819" height="15.933"/> <rect x="167.916" y="176.169" width="176.169" height="15.933"/> <path d="M217.82,31.893c9.703-10.589,22.549-15.96,38.18-15.96c37.015,0,49.26,30.649,49.75,31.921l14.919-5.596 C320.023,40.533,304.268,0,256,0c-38.796,0-58.301,27.828-63.193,42.543l15.119,5.026C207.952,47.493,210.672,39.693,217.82,31.893z "/> <path d="M256,37.089c-27.026,0-35.043,23-35.371,23.98l15.081,5.138c0.484-1.35,5.167-13.184,20.289-13.184 c15.336,0,20.578,12.069,21.099,13.375l14.919-5.596C291.655,59.835,282.817,37.089,256,37.089z"/> <path d="M256,74.179c-14.618,0-26.512,11.893-26.512,26.511S241.381,127.2,256,127.2c14.618,0,26.511-11.893,26.511-26.511 C282.512,86.071,270.619,74.179,256,74.179z M256,111.267c-5.833,0-10.579-4.745-10.579-10.578c0-5.833,4.745-10.578,10.579-10.578 c5.833,0,10.578,4.745,10.578,10.578C266.579,106.522,261.834,111.267,256,111.267z"/> </svg>
+                    </div>
+
+                    <div class="garage_create_right_top3_3" onclick="garagetypefnc('highgarage')" >
+                        <img src="grp3.png" alt="" style="position: absolute;" id="highgarage">
+                        <div class="demotext">
+                            HIGH GARAGE </br>
+                            $50000
+                        </div>
+                        <svg  style="margin-top: 10px; margin-left:10px; opacity:0.5;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20H3V6L12 4L21 6V20H18M6 20H18M6 20V16M18 20V16M6 12V8L18 8V12M6 12L18 12M6 12V16M18 12V16M6 16H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+                        <svg  style="  margin-left:2px; opacity:0.5;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 20H3V6L12 4L21 6V20H18M6 20H18M6 20V16M18 20V16M6 12V8L18 8V12M6 12L18 12M6 12V16M18 12V16M6 16H18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+
+                    </div>
+
+                    <div class="garage_create_right_top3_4" onclick="garagetypefnc('premiumgarage')" >
+                        <img src="grp4.png" alt="" style="position: absolute;" id="premiumgarage">
+                        <div class="demotext">
+                            BEST GARAGE </br>
+                            $10000
+                        </div>
+                        <svg style="margin: 10px; opacity:0.5;" width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.3196 3H5.08961C3.09961 3 2.09961 4.01 2.09961 6.02V22H7.49961V18.25C7.49961 17.84 7.83961 17.5 8.24961 17.5C8.65961 17.5 8.99961 17.83 8.99961 18.25V22H14.2996V6.02C14.2996 4.01 13.3096 3 11.3196 3ZM10.7496 12.75H5.79961C5.38961 12.75 5.04961 12.41 5.04961 12C5.04961 11.59 5.38961 11.25 5.79961 11.25H10.7496C11.1596 11.25 11.4996 11.59 11.4996 12C11.4996 12.41 11.1596 12.75 10.7496 12.75ZM10.7496 9H5.79961C5.38961 9 5.04961 8.66 5.04961 8.25C5.04961 7.84 5.38961 7.5 5.79961 7.5H10.7496C11.1596 7.5 11.4996 7.84 11.4996 8.25C11.4996 8.66 11.1596 9 10.7496 9Z" fill="white"/> <path d="M23 21.2511H20.73V18.2511C21.68 17.9411 22.37 17.0511 22.37 16.0011V14.0011C22.37 12.6911 21.3 11.6211 19.99 11.6211C18.68 11.6211 17.61 12.6911 17.61 14.0011V16.0011C17.61 17.0411 18.29 17.9211 19.22 18.2411V21.2511H1C0.59 21.2511 0.25 21.5911 0.25 22.0011C0.25 22.4111 0.59 22.7511 1 22.7511H19.93C19.95 22.7511 19.96 22.7611 19.98 22.7611C20 22.7611 20.01 22.7511 20.03 22.7511H23C23.41 22.7511 23.75 22.4111 23.75 22.0011C23.75 21.5911 23.41 21.2511 23 21.2511Z" fill="white"/> </svg>
+                    </div>
+                </div>
+
+                <div class="garage_create_right_top4">
+                    <div style="width: 8px; height:8px; background-color:#7C7C7C; border-radius:50%;"></div>
+                    <div style="margin-top: -2px; margin-left:3px;">Garage Theme</div>
+                </div>
+
+                <div class="garage_create_right_top5">
+                    <div class="garage_create_right_top5_item" onclick="colorselectgrg(7)" id="bluecolor"></div>
+                    <div class="garage_create_right_top5_item" onclick="colorselectgrg(5)" id="orangecolor" style="background-color: #FF5C00;"></div>
+                    <div class="garage_create_right_top5_item" onclick="colorselectgrg(1)" id="whitecolor" style="background-color: white;"></div>
+                    <div class="garage_create_right_top5_item" onclick="colorselectgrg(9)" id="greencolor" style="background-color: #70FF00;"></div>
+                    <div class="garage_create_right_top5_item" onclick="colorselectgrg(8)" id="redcolor" style="background-color: #FF0000;"></div>
+
+
+
+                </div>
+
+                <div class="garage_create_right_top6">
+                    <div class="garage_create_right_top6_1">
+                        <div class="garage_create_right_top6_1_icon">
+                           <svg fill="white" height="23px" width="23px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.327 489.327" xml:space="preserve"> <g> <g> <path d="M478.483,273.213l-9.2-12.6c-7.6-10.4-7.7-24.5-0.3-35.1l9-12.7c10.4-14.8,5.6-35.3-10.4-43.9l-13.7-7.4 c-11.4-6.1-17.6-18.8-15.5-31.5l2.6-15.4c3-17.8-10.3-34.3-28.4-35l-15.6-0.7c-12.9-0.5-24-9.3-27.6-21.7l-4.3-15 c-5-17.4-24.1-26.4-40.8-19.2l-14.3,6.2c-11.9,5.1-25.6,2.1-34.3-7.6l-10.4-11.6c-12.1-13.5-33.2-13.3-45.1,0.3l-10.2,11.8 c-8.5,9.7-22.2,13-34.1,8.1l-14.4-5.9c-16.7-6.9-35.7,2.4-40.5,19.9l-4.1,15c-3.3,12.6-14.2,21.5-27.1,22.2l-15.6,0.9 c-18.1,1-31.1,17.7-27.8,35.4l2.8,15.3c2.3,12.7-3.7,25.5-15,31.7l-13.6,7.6c-15.8,8.8-20.4,29.4-9.7,44l9.2,12.6 c7.6,10.4,7.7,24.5,0.3,35.1l-9,12.7c-10.4,14.8-5.6,35.3,10.4,43.9l13.7,7.4c11.4,6.1,17.6,18.8,15.5,31.5l-2.7,15.3 c-3,17.8,10.3,34.3,28.4,35l15.6,0.7c12.9,0.5,24,9.3,27.6,21.7l4.3,15c5,17.4,24.1,26.4,40.8,19.2l14.3-6.2 c11.9-5.1,25.6-2.1,34.3,7.5l10.4,11.6c12.1,13.5,33.2,13.3,45.1-0.3l10.2-11.8c8.5-9.7,22.2-13,34.1-8.1l14.4,5.9 c16.7,6.9,35.7-2.4,40.5-19.9l4.1-15c3.4-12.4,14.4-21.3,27.3-22.1l15.6-0.9c18.1-1,31.1-17.7,27.8-35.4l-2.8-15.3 c-2.3-12.7,3.7-25.5,15-31.7l13.6-7.6C484.583,308.513,489.083,287.813,478.483,273.213z M244.683,402.713 c-87.2,0-157.9-70.7-157.9-157.9s70.7-157.9,157.9-157.9s157.9,70.7,157.9,157.9S331.883,402.713,244.683,402.713z"/> <path d="M224.483,249.013l-14-14.1c-8.3-8.4-21.9-8.4-30.3-0.1l0,0c-8.4,8.3-8.4,21.9-0.1,30.3l14,14.1l15.6,15.6 c8.1,8.2,21.3,8.2,29.5,0.1l15.6-15.5l54.4-54.1c8.4-8.3,8.4-21.9,0.1-30.3l0,0c-8.3-8.4-21.9-8.4-30.3-0.1L224.483,249.013z"/> </g> </g> </svg>
+                        </div>
+
+                        <input type="text" class="garage_create_right_top6_1_input" placeholder="GARAGE NAME" id="createnameid">
+                    </div>
+
+                    <div class="garage_create_right_top6_1">
+                        <div class="garage_create_right_top6_1_icon2" >
+                            <svg height="18px" width="18px" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M8.20312 19L11.1861 0.818181H14.7372L11.7543 19H8.20312ZM0.142045 14.8452L0.745739 11.294H15.3764L14.7727 14.8452H0.142045ZM1.81108 19L4.79403 0.818181H8.34517L5.36222 19H1.81108ZM1.17188 8.52415L1.77557 4.97301H16.4062L15.8026 8.52415H1.17188Z" fill="white"/> </svg>
+                          
+                        </div>
+
+                        <input type="text" class="garage_create_right_top6_1_input" placeholder="GARAGE URL" id="createurlid">
+                    </div>
+                </div>
+
+                <div class="garage_create_right_top7"> 
+
+                    <div class="garage_create_right_top6_2">
+                        <div class="garage_create_right_top6_1_icon3">
+                            <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.8125 23.2727V0.545453H9.26847V23.2727H7.8125ZM10.973 8.5C10.9257 7.90814 10.7037 7.4465 10.3072 7.11506C9.91655 6.78362 9.32173 6.6179 8.52273 6.6179C8.01373 6.6179 7.59647 6.68004 7.27095 6.80433C6.95135 6.9227 6.71461 7.08546 6.56072 7.29261C6.40684 7.49976 6.32694 7.73651 6.32102 8.00284C6.30919 8.22183 6.34766 8.4201 6.43644 8.59766C6.53113 8.76929 6.6791 8.92614 6.88033 9.06818C7.08156 9.20431 7.33902 9.3286 7.6527 9.44105C7.96638 9.5535 8.33925 9.65412 8.77131 9.7429L10.2628 10.0625C11.2689 10.2756 12.1301 10.5567 12.8462 10.9059C13.5624 11.2551 14.1483 11.6664 14.604 12.1399C15.0598 12.6075 15.3942 13.1342 15.6072 13.7202C15.8262 14.3061 15.9387 14.9453 15.9446 15.6378C15.9387 16.8333 15.6398 17.8454 15.0479 18.674C14.4561 19.5026 13.6097 20.1329 12.5089 20.565C11.4139 20.997 10.0971 21.2131 8.55824 21.2131C6.97798 21.2131 5.59896 20.9793 4.42116 20.5117C3.24929 20.0442 2.33783 19.325 1.68679 18.3544C1.04167 17.3778 0.716146 16.129 0.710227 14.608H5.39773C5.42732 15.1643 5.56641 15.6319 5.81499 16.0107C6.06357 16.3894 6.41276 16.6765 6.86257 16.8718C7.3183 17.0671 7.85985 17.1648 8.48722 17.1648C9.01397 17.1648 9.4549 17.0997 9.81001 16.9695C10.1651 16.8393 10.4344 16.6587 10.6179 16.4279C10.8014 16.1971 10.8961 15.9337 10.902 15.6378C10.8961 15.3596 10.8043 15.117 10.6268 14.9098C10.4551 14.6967 10.171 14.5073 9.7745 14.3416C9.37796 14.17 8.84233 14.0102 8.16761 13.8622L6.35653 13.4716C4.74669 13.1224 3.47715 12.5394 2.54794 11.7227C1.62464 10.9 1.16596 9.77841 1.17188 8.35795C1.16596 7.20383 1.47372 6.19472 2.09517 5.33061C2.72254 4.46058 3.58961 3.78291 4.69638 3.29758C5.80907 2.81226 7.08452 2.5696 8.52273 2.5696C9.99053 2.5696 11.2601 2.81522 12.3313 3.30646C13.4026 3.7977 14.2282 4.49018 14.8082 5.38388C15.3942 6.27166 15.6901 7.31037 15.696 8.5H10.973Z" fill="white"/> </svg>
+                          
+                        </div>
+
+                        <input type="text" class="garage_create_right_top6_1_input" placeholder="GARAGE PRICE" id="createpriceid">
+                    </div>
+
+                    <div class="garage_create_right_top6_3" onclick="createclick()">
+                        <div style="font-family: intermedium; font-size: 15px; font-weight: 600; line-height: 23px; letter-spacing: 0.5px; text-align: left; color:#FFF; margin-top:5px; margin-left:43px;">CREATE GARAGE</div>
+                    </div>
+                       
+                </div>
+
+                <div class="garage_create_right_top8">
+                    <div class="garage_create_right_top8_1" onclick="takephoto()">
+                        <img src="alticon1.png" alt="" srcset="">
+                    </div>
+                    <div class="garage_create_right_top8_1" onclick="selectcoord()">
+                        <img src="alticon2.png" alt="" srcset="">
+                    </div>
+
+                    <div class="garage_create_right_top8_2">
+                        Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate ac aliquet odio mattis.
+                    </div>
+
+                
+                </div>
+            </div>
+        </div>
+        
+        <!-- ----------------------------------------------- garage settings ------------------------------------------------------------------------------------- -->
+        <div class="garage_settings" style="display: none;">
+            <div class="garage_settings_left">
+                <div class="garage_settings_left_img">
+                    <img src="garageimage.png" alt="" srcset="">
+                </div>
+
+                <div class="garage_settings_left_1">
+                    <div class="garage_settings_left_1_1">
+                        <div class="garage_settings_left_1_1_top">
+                            <div class="garage_settings_left_1_1_top_avatar">
+                                <img id="garagesettingsownerimgid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOtefq6hB8q_4FfMAbTphPUBm0VQLFQXfFQ&usqp=CAU" alt="" srcset="">
+                            </div>
+
+                            <div class="garage_settings_left_1_1_top_text">
+                                <div class="garage_settings_left_1_1_top_text_1" id="garagesettingsownerid"> 
+                                    Adez Soyhan
+                                </div>
+
+                                <div class="garage_settings_left_1_1_top_text_2">
+                                    OWNER
+                                </div>
+                                <svg style="position: absolute; margin-left:122px; margin-top:5px;" width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path id="Star 1" d="M15.1631 1.26548C15.8573 -0.346443 18.1427 -0.346442 18.8369 1.26548L21.9379 8.46632C22.2275 9.13867 22.8612 9.59911 23.5901 9.66672L31.3968 10.3908C33.1443 10.5528 33.8506 12.7265 32.532 13.8848L26.6419 19.0592C26.0919 19.5423 25.8499 20.2873 26.0108 21.0015L27.7346 28.6498C28.1205 30.3619 26.2715 31.7053 24.7624 30.8092L18.0211 26.8063C17.3917 26.4326 16.6083 26.4326 15.9789 26.8063L9.23757 30.8092C7.72851 31.7053 5.87952 30.3619 6.26539 28.6498L7.98918 21.0015C8.15013 20.2873 7.90806 19.5423 7.35809 19.0592L1.46795 13.8848C0.149427 12.7265 0.85568 10.5528 2.60322 10.3908L10.4099 9.66672C11.1388 9.59911 11.7725 9.13867 12.0621 8.46632L15.1631 1.26548Z" fill="#161616"/> </svg>
+                               
+                            </div>
+                        </div>
+
+                        <div class="garage_settings_left_1_1_bottom">
+                            <div class="garage_settings_left_1_1_bottom_text">
+                                GARAGE PROFILE
+                            </div>
+                        </div>
+
+                       
+                    </div>
+
+
+                    <div class="garage_settings_left_1_2" >
+                        <img src="settingimg.png" alt="" style="position: absolute;">
+
+                        <div class="garage_settings_left_1_2_center">
+                            <div class="garage_settings_left_1_1_bottom_text_t" id="garagesettingsvehcountid">12</div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="garage_settings_right_top">
+                <div class="garage_settings_right_top_1" id="garagesettingsownernameid">JOSH BERNSTEIN’S GARAGE</div>
+                <div class="garage_settings_right_top_2">Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</div>
+                 <div class="garage_settings_right_top_icon">
+                    <div class="garage_settings_right_top_icon_1" onclick="closegaragesettings()">
+                        <svg style="margin: 15px;cursor: pointer;" fill="#545454" height="21px" width="21px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+                    </div>
+
+                    <div class="garage_settings_right_top_icon_1" onclick="garagesettingscolor()">
+                        <svg  style="margin: 9px;cursor: pointer;" width="33px" height="33px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M20.1 9.2214C18.29 9.2214 17.55 7.9414 18.45 6.3714C18.97 5.4614 18.66 4.3014 17.75 3.7814L16.02 2.7914C15.23 2.3214 14.21 2.6014 13.74 3.3914L13.63 3.5814C12.73 5.1514 11.25 5.1514 10.34 3.5814L10.23 3.3914C9.78 2.6014 8.76 2.3214 7.97 2.7914L6.24 3.7814C5.33 4.3014 5.02 5.4714 5.54 6.3814C6.45 7.9414 5.71 9.2214 3.9 9.2214C2.86 9.2214 2 10.0714 2 11.1214V12.8814C2 13.9214 2.85 14.7814 3.9 14.7814C5.71 14.7814 6.45 16.0614 5.54 17.6314C5.02 18.5414 5.33 19.7014 6.24 20.2214L7.97 21.2114C8.76 21.6814 9.78 21.4014 10.25 20.6114L10.36 20.4214C11.26 18.8514 12.74 18.8514 13.65 20.4214L13.76 20.6114C14.23 21.4014 15.25 21.6814 16.04 21.2114L17.77 20.2214C18.68 19.7014 18.99 18.5314 18.47 17.6314C17.56 16.0614 18.3 14.7814 20.11 14.7814C21.15 14.7814 22.01 13.9314 22.01 12.8814V11.1214C22 10.0814 21.15 9.2214 20.1 9.2214ZM12 15.2514C10.21 15.2514 8.75 13.7914 8.75 12.0014C8.75 10.2114 10.21 8.7514 12 8.7514C13.79 8.7514 15.25 10.2114 15.25 12.0014C15.25 13.7914 13.79 15.2514 12 15.2514Z" fill="#545454"/> </svg>
+                        <!-- <svg style="margin: 13px;cursor: pointer;" fill="#545454" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg> -->
+                    </div>
+                 </div>
+            </div>
+
+          <!-- -------------------------------------------------------------------------------------------------- Garage settings change part ------------------------------------------------------------ -->
+            <div class="garage_settings_changepart" style="display: none;">
+
+                <!-- --------------- changepart left ----------------------------  -->
+
+                <div class="garage_settings_changepart_left" id="settingsleftid">
+                    <div class="garage_settings_changepart_left_item">
+                        <div class="garage_settings_changepart_left_item_1"> 
+                            <img src="park1.png" alt="" style="margin-left: 30px;">
+                        </div>
+                    </div>
+
+                    <div class="garage_settings_changepart_left_item">
+                        <div class="garage_settings_changepart_left_item_1"> 
+                            <img src="https://raw.githubusercontent.com/MericcaN41/gta5carimages/main/images/t20.png" alt="" style="margin-left: 30px;">
+                        </div>
+                    </div>
+                    <div class="garage_settings_changepart_left_item">
+                        <div class="garage_settings_changepart_left_item_1"> 
+                            <img src="park1.png" alt="" style="margin-left: 30px;">
+                        </div>
+                    </div>
+                    <div class="garage_settings_changepart_left_item">
+                        <div class="garage_settings_changepart_left_item_1"> 
+                            <img src="park1.png" alt="" style="margin-left: 30px;">
+                        </div>
+                    </div>
+                    <div class="garage_settings_changepart_left_item">
+                        <div class="garage_settings_changepart_left_item_1"> 
+                            <img src="park1.png" alt="" style="margin-left: 30px;">
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+
+                <!-- --------------- changepart center ----------------------------  -->
+
+                <div class="garage_settings_changepart_center" style="display: none;" id="changepartcenterid">
+                    <div class="garage_settings_changepart_center_top">
+                        <div class="garage_settings_changepart_center_top_top">
+                            <div class="garage_settings_changepart_center_top_top_1">
+                                <div class="garage_settings_changepart_center_top_top_1_avatar">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOtefq6hB8q_4FfMAbTphPUBm0VQLFQXfFQ&usqp=CAU" alt="" srcset="">
+                                </div>
+
+                                <div class="garage_settings_changepart_center_top_top_1_text">
+                                    <div class="garage_settings_changepart_center_top_top_1_text_1" id="vehinfoownid2"> 
+                                        Adez Soyhan
+                                    </div>
+    
+                                    <div class="garage_settings_changepart_center_top_top_1_text_2">
+                                        OWNER
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="garage_settings_changepart_center_top_top_2">
+                                <div class="garage_settings_changepart_center_top_top_2_1" id="vehinfocolor1id2"></div>
+                                <div class="garage_settings_changepart_center_top_top_2_1" id="vehinfocolor2id2" style="background-color: #444444;"></div>
+
+                                <div class="garage_settings_changepart_center_top_top_2_2">S+</div>
+
+                            </div>
+                        </div>
+
+                        <div class="garage_settings_changepart_center_top_center">
+                            <img src="garagegarip.png" alt="">
+                        </div>
+
+                        <div class="garage_settings_changepart_center_vehiclelogo">
+                            <img src="https://assets.stickpng.com/images/580b585b2edbce24c47b2c8d.png" alt="" id="vehinfoimgid2">
+                        </div>
+
+                        <div class="garage_settings_changepart_center_top_bottom"> 
+                            <div class="garage_settings_changepart_center_top_bottom_1" id="vehinfonameid2">
+                                lamborghini
+                            </div>
+
+                            <div class="garage_settings_changepart_center_top_bottom_2">VEHICLE</div>
+                        </div>
+                    </div>
+
+
+                    <div class="garage_settings_changepart_center_bottom">
+                        <div class="garage_settings_changepart_center_bottom_left">
+                            <div class="garage_settings_changepart_center_bottom_left_img1">
+                                <img src="card1.png" alt="" style="position: absolute;">
+
+                                <div class="garage_settings_changepart_center_bottom_left_img1_text" id="vehinfofuelid2">
+                                    54 LITERS
+                                </div>
+                            </div>
+
+                            <div class="garage_settings_changepart_center_bottom_left_img2">
+                                <img src="card2.png" alt="" style="position: absolute;">
+
+                                <div class="garage_settings_changepart_center_bottom_left_img1_text2" id="vehinfospeedtextid2">
+                                    250/s
+                                </div>
+                            </div>
+
+                            <div class="garage_settings_changepart_center_bottom_left_img3">
+                                <img src="card3.png" alt="" style="position: absolute;">
+
+                                <div class="garage_settings_changepart_center_bottom_left_img1_text3" id="vehinfoseattextid2">
+                                    2 PEOPLE
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="garage_settings_changepart_center_bottom_right">
+                             <div class="garage_settings_changepart_center_bottom_right_top">
+                                <div class="garage_settings_changepart_center_bottom_right_top_1">
+                                    <div class="garage_settings_changepart_center_bottom_right_top_1_1">VEHICLE</div>
+
+                                    <div class="garage_settings_changepart_center_bottom_right_top_1_2">ABOUT</div>
+                                </div>
+
+                                <div class="garage_settings_changepart_center_bottom_right_top_2">
+                                    <svg width="25" height="25" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Group 301"> <circle id="Ellipse 20" cx="13.5" cy="13.5" r="13.5" fill="#FF4545"/> <rect id="Rectangle 86" x="6" y="8.82843" width="4" height="18" rx="2" transform="rotate(-45 6 8.82843)" fill="#232323"/> <rect id="Rectangle 87" x="18.7279" y="6" width="4" height="18" rx="2" transform="rotate(45 18.7279 6)" fill="#232323"/> </g> </svg>
+                                </div>
+                             </div>
+
+
+                             <div class="garage_settings_changepart_center_bottom_right_bottom">
+                                <div class="garage_settings_changepart_center_bottom_right_bottom_item">
+                                    <div id="garage_settings_changepart_center_bottom_right_bottom_item_1">
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_1_icon">
+                                            <svg  style="margin-bottom:11px; margin-right:12px;" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Component 1"> <path id="Rectangle 38" d="M1.18716 8.51681C0.531512 7.80605 0.531512 6.65369 1.18716 5.94294L5.3879 1.38917C6.04355 0.678418 7.10658 0.678418 7.76223 1.38917L9.37165 3.13385L2.79659 10.2615L1.18716 8.51681Z" fill="#4D4D4D"/> <path id="Rectangle 39" d="M16.2378 1.28693C16.8934 0.57618 17.9564 0.57618 18.6121 1.28693L22.8128 5.8407C23.4685 6.55146 23.4685 7.70382 22.8128 8.41457L21.2034 10.1592L14.6283 3.03161L16.2378 1.28693Z" fill="#4D4D4D"/> <path id="Rectangle 40" d="M15.1003 3.92L20.3267 9.58563L18.0266 12.0791L12.8002 6.41342L15.1003 3.92Z" fill="#4D4D4D"/> <path id="Rectangle 41" d="M3.78003 9.58562L9.00643 3.92L11.3066 6.41342L6.08015 12.079L3.78003 9.58562Z" fill="#4D4D4D"/> <path id="Vector 5" d="M11.2705 7.14L6.23383 12.6L6.62127 14.14L11.0122 9.66C11.7766 9.17009 12.2313 9.19779 13.0786 9.66L17.7279 13.16L17.857 12.6L12.8203 7.14H11.2705Z" fill="#4D4D4D"/> <path id="Vector 5 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M11.2171 7H12.8738L18.0001 12.5571L17.8078 13.3906L13.0125 9.78065C12.5979 9.55521 12.2961 9.44606 12.013 9.44295C11.7342 9.43988 11.4563 9.53976 11.0903 9.77268L6.55326 14.4017L6.08954 12.5585L11.2171 7ZM11.3241 7.28L6.37817 12.6415L6.68933 13.8783L10.9342 9.5474L10.9465 9.53949C11.3388 9.28809 11.6674 9.15914 12.0157 9.16296C12.361 9.16676 12.7081 9.30116 13.1367 9.53494L13.1448 9.53938L17.648 12.9294L17.714 12.6429L12.7668 7.28H11.3241Z" fill="#4D4D4D"/> <path id="Ellipse 3" d="M13.3369 11.2C13.3369 11.9732 12.7587 12.6 12.0454 12.6C11.3322 12.6 10.754 11.9732 10.754 11.2C10.754 10.4268 11.3322 9.8 12.0454 9.8C12.7587 9.8 13.3369 10.4268 13.3369 11.2Z" fill="#4D4D4D"/> <path id="Ellipse 4" d="M17.9862 15.12C17.9862 16.2025 17.1767 17.08 16.1781 17.08C15.1795 17.08 14.3701 16.2025 14.3701 15.12C14.3701 14.0375 15.1795 13.16 16.1781 13.16C17.1767 13.16 17.9862 14.0375 17.9862 15.12Z" fill="#4D4D4D"/> <path id="Ellipse 5" d="M10.754 16.38C10.754 17.6944 9.771 18.76 8.55847 18.76C7.34593 18.76 6.36298 17.6944 6.36298 16.38C6.36298 15.0656 7.34593 14 8.55847 14C9.771 14 10.754 15.0656 10.754 16.38Z" fill="#4D4D4D"/> <g id="Vector 6"> <path d="M10.1082 11.48L8.42932 13.3C10.2419 13.4491 11.2837 14.4417 11.3997 16.52L14.4992 13.3C14.8813 12.8949 15.1253 12.7225 15.6615 12.6L13.8535 11.2C13.7508 13.761 10.8697 14.0101 10.1082 11.48Z" fill="#4D4D4D"/> <path d="M13.7243 15.12L11.9163 16.94H14.4992C13.8296 16.3583 13.6933 15.9483 13.7243 15.12Z" fill="#4D4D4D"/> </g> <path id="Vector 6 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M13.7348 10.9361L15.9757 12.6713L15.6881 12.737C15.4284 12.7963 15.2472 12.866 15.0867 12.9655C14.9252 13.0657 14.7779 13.2003 14.5895 13.4001L14.5886 13.4011L11.2876 16.8303L11.2708 16.5285C11.2141 15.5131 10.9327 14.7826 10.4609 14.2871C9.98803 13.7907 9.30722 13.5126 8.41954 13.4396L8.13916 13.4165L10.1657 11.2197L10.231 11.4366C10.5952 12.6468 11.4553 13.1705 12.2184 13.1096C12.9771 13.049 13.6757 12.4083 13.7244 11.1939L13.7348 10.9361ZM13.9632 11.4571C13.8267 12.6476 13.0779 13.3217 12.2374 13.3888C11.393 13.4562 10.4881 12.909 10.0559 11.7347L8.71336 13.1901C9.51226 13.2982 10.1638 13.5854 10.6406 14.086C11.1214 14.5908 11.4108 15.2983 11.5053 16.2164L14.4089 13.1999C14.4091 13.1997 14.4092 13.1996 14.4094 13.1994C14.6029 12.9943 14.7685 12.8403 14.9584 12.7225C15.0805 12.6468 15.21 12.5876 15.3597 12.5383L13.9632 11.4571ZM13.8661 14.7862L13.8534 15.1257C13.8381 15.5323 13.8651 15.8163 13.9671 16.0658C14.0689 16.315 14.2523 16.5461 14.58 16.8308L14.8668 17.08H11.5874L13.8661 14.7862ZM12.2451 16.8H14.1539C13.9583 16.5968 13.8208 16.399 13.7309 16.1792C13.6396 15.9557 13.6011 15.718 13.5928 15.4434L12.2451 16.8Z" fill="#4D4D4D"/> <path id="Ellipse 6" d="M5.82721 16.9843C5.19571 16.8302 4.61395 16.4952 4.14264 16.0142C3.67133 15.5333 3.32775 14.924 3.14778 14.2499C2.9678 13.5759 2.95802 12.8619 3.11946 12.1824C3.28089 11.5028 3.60763 10.8827 4.06555 10.3868L5.2697 11.6934C5.02753 11.9557 4.85474 12.2836 4.76936 12.643C4.68399 13.0023 4.68916 13.38 4.78434 13.7364C4.87952 14.0929 5.06122 14.4151 5.31047 14.6694C5.55972 14.9238 5.86738 15.101 6.20134 15.1825L5.82721 16.9843Z" fill="#4D4D4D"/> <path id="Ellipse 7" d="M19.0485 16.6866C19.5681 16.4132 20.0198 16.0089 20.3656 15.5074C20.7115 15.006 20.9415 14.422 21.0365 13.8044C21.1314 13.1868 21.0885 12.5535 20.9114 11.9576C20.7342 11.3616 20.4279 10.8204 20.0182 10.3791L18.8174 11.6893C19.0341 11.9227 19.1961 12.2089 19.2898 12.5241C19.3835 12.8393 19.4061 13.1742 19.3559 13.5008C19.3057 13.8274 19.1841 14.1362 19.0011 14.4014C18.8182 14.6666 18.5794 14.8804 18.3046 15.025L19.0485 16.6866Z" fill="#4D4D4D"/> <path id="Rectangle 42" d="M12.8203 17.64H13.5952V20.58C13.5952 20.812 13.4217 21 13.2078 21C12.9938 21 12.8203 20.812 12.8203 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 43" d="M15.145 17.64H15.9198V20.58C15.9198 20.812 15.7464 21 15.5324 21C15.3184 21 15.145 20.812 15.145 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 44" d="M10.4957 18.48C10.4957 18.0161 10.8426 17.64 11.2705 17.64V20.58C11.2705 20.812 11.0971 21 10.8831 21H10.537C10.5142 21 10.4957 20.9799 10.4957 20.9552V18.48Z" fill="#4D4D4D"/> <path id="Rectangle 45" d="M8.17102 19.88C8.17102 19.4161 8.51795 19.04 8.9459 19.04V20.58C8.9459 20.812 8.77244 21 8.55846 21H8.19513C8.18181 21 8.17102 20.9883 8.17102 20.9739V19.88Z" fill="#4D4D4D"/> <path id="Rectangle 46" d="M9.46252 19.32C9.46252 19.0107 9.69381 18.76 9.97911 18.76V19.88C9.97911 20.0346 9.86347 20.16 9.72082 20.16H9.47974C9.47023 20.16 9.46252 20.1516 9.46252 20.1413V19.32Z" fill="#4D4D4D"/> <path id="Rectangle 47" d="M11.7871 18.2C11.7871 17.8907 12.0184 17.64 12.3037 17.64V20.16C12.3037 20.3146 12.1881 20.44 12.0454 20.44H11.8215C11.8025 20.44 11.7871 20.4233 11.7871 20.4027V18.2Z" fill="#4D4D4D"/> <path id="Rectangle 48" d="M14.1118 18.2C14.1118 17.8907 14.343 17.64 14.6283 17.64V20.16C14.6283 20.3146 14.5127 20.44 14.37 20.44H14.1462C14.1272 20.44 14.1118 20.4233 14.1118 20.4027V18.2Z" fill="#4D4D4D"/> </g> </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text">
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_1" id="vehinfenginetextid2">88%</div>
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_2">ENGINE HEALTH</div>
+                                    </div>
+                                </div>
+
+                                <div class="garage_settings_changepart_center_bottom_right_bottom_item">
+                                    <div id="garage_settings_changepart_center_bottom_right_bottom_item_2">
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_1_icon">
+                                            <svg style="margin-bottom:9px; margin-right:11px;" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Group 5"> <path id="Ellipse 1" d="M7.20192 1.17832C5.05796 2.18161 3.24294 3.77303 1.96802 5.76744C0.693088 7.76186 0.0106606 10.0773 0.000123841 12.4444C-0.0104129 14.8114 0.651374 17.1328 1.9085 19.1385C3.16562 21.1442 4.9664 22.7517 7.10134 23.7741L9.63678 18.4793C8.5045 17.9371 7.54944 17.0845 6.88272 16.0208C6.21599 14.9571 5.86501 13.7259 5.8706 12.4705C5.87618 11.2151 6.23811 9.98709 6.91428 8.92934C7.59045 7.87158 8.55306 7.02756 9.69012 6.49546L7.20192 1.17832Z" fill="#4C4C4C"/> <path id="Ellipse 2" d="M8.4023 2.11207C10.0592 1.42814 11.8567 1.1695 13.6356 1.35904C15.4145 1.54857 17.1198 2.18045 18.6007 3.19869C20.0815 4.21693 21.292 5.5901 22.125 7.19658C22.958 8.80305 23.3879 10.5932 23.3764 12.4086C23.3649 14.2239 22.9124 16.0083 22.0592 17.6038C21.2059 19.1993 19.9781 20.5566 18.4845 21.5554C16.9909 22.5543 15.2777 23.1639 13.4965 23.3302C11.7154 23.4965 9.92128 23.2145 8.2732 22.509L8.88066 21.0472C10.2919 21.6513 11.8281 21.8928 13.3533 21.7504C14.8784 21.6079 16.3455 21.086 17.6244 20.2307C18.9033 19.3754 19.9547 18.2132 20.6853 16.847C21.416 15.4808 21.8034 13.9528 21.8132 12.3984C21.8231 10.8439 21.455 9.31104 20.7417 7.93544C20.0284 6.55985 18.9919 5.38402 17.7239 4.51212C16.4559 3.64022 14.9956 3.09916 13.4724 2.93686C11.9491 2.77456 10.41 2.99604 8.9912 3.58167L8.4023 2.11207Z" fill="#4C4C4C"/> <path id="Vector 4" fill-rule="evenodd" clip-rule="evenodd" d="M9.01086 16.2622C11.1008 18.3888 14.5486 18.3888 16.6385 16.2622C18.6963 14.1684 18.6963 10.8316 16.6385 8.73779C14.5486 6.61121 11.1008 6.61121 9.01086 8.73779C6.95309 10.8316 6.95309 14.1684 9.01086 16.2622ZM13.961 11.526C13.4898 11.1019 13.4898 10.3267 13.961 9.9026C14.3851 9.52091 14.998 9.52091 15.4221 9.9026C15.8933 10.3267 15.8933 11.1019 15.4221 11.526C14.998 11.9077 14.3851 11.9077 13.961 11.526ZM10.0649 11.526C9.59371 11.1019 9.59371 10.3267 10.0649 9.9026C10.489 9.52091 11.1019 9.52091 11.526 9.9026C11.9972 10.3267 11.9972 11.1019 11.526 11.526C11.1019 11.9077 10.489 11.9077 10.0649 11.526ZM13.961 15.2597C13.4898 14.8356 13.4898 14.0605 13.961 13.6364C14.3851 13.2547 14.998 13.2547 15.4221 13.6364C15.8933 14.0605 15.8933 14.8356 15.4221 15.2597C14.998 15.6414 14.3851 15.6414 13.961 15.2597ZM10.0649 15.2597C9.59372 14.8356 9.59372 14.0605 10.0649 13.6364C10.489 13.2547 11.1019 13.2547 11.526 13.6364C11.9972 14.0605 11.9972 14.8356 11.526 15.2597C11.1019 15.6414 10.489 15.6414 10.0649 15.2597Z" fill="#4C4C4C" stroke="#4C4C4C"/> </g> </svg>
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text">
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_1" id="vehinfobraketextid2">HARD</div>
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_2">VEHICLE BRAKE</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="garage_settings_changepart_center_bottom_right_bottom_item">
+                                    <div id="garage_settings_changepart_center_bottom_right_bottom_item_3">
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_1_icon">
+                                            <svg style="margin-bottom:9px; margin-right:15px; " width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path id="Vector 3" d="M9.39149 1L1 5.7758C1.06418 12.7052 0.747035 17.9407 9.39149 23C17.0313 18.9025 17.945 14.4065 18 5.7758L9.39149 1Z" fill="#4C4C4C" stroke="#4C4C4C"/> </svg>
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text">
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_1" id="vehinfbodytextid2">HARD</div>
+                                        <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_2">VEHICLE BODY</div>
+                                    </div>
+                                </div>
+
+
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- --------------- changepart right ----------------------------  -->
+                <div class="garage_settings_changepart_right" id="settingsrightid">
+                    <div class="garage_settings_changepart_right_item">
+                        <img src="park1.png" alt="" style="margin-left: 30px;">
+                    </div>
+
+                    <div class="garage_settings_changepart_right_item">
+                        <img src="park1.png" alt="" style="margin-left: 30px;">
+                    </div>
+                   
+                    <div class="garage_settings_changepart_right_item">
+                        <img src="park1.png" alt="" style="margin-left: 30px;">
+                    </div>
+                    <div class="garage_settings_changepart_right_item">
+                        <img src="park1.png" alt="" style="margin-left: 30px;">
+                    </div>
+                    <div class="garage_settings_changepart_right_item">
+                        <img src="park1.png" alt="" style="margin-left: 30px;">
+                    </div>
+                    
+
+                </div>
+            </div>
+
+
+            <!-- -------------------------------------------------------------------------------------------------- Garage settings change color ------------------------------------------------------------ -->
+            <div class="garage_settings_colorpart" style="display: none;">
+                <div class="garage_settings_colorpart_top">
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(4)">
+                        <img src="garage1.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(5)">
+                        <img src="garage2.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(6)">
+                        <img src="garage3.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(7)">
+                        <img src="garage4.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(8)">
+                        <img src="garage5.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(9)">
+                        <img src="garage6.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(10)">
+                        <img src="garage7.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(11)">
+                        <img src="garage8.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(1)">
+                        <img src="garage9.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(2)">
+                        <img src="garage10.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_colorpart_top_item" onclick="changecolorset(3)">
+                        <img src="garage11.png" alt="">
+                    </div>
+                </div>
+
+                <div class="garage_settings_colorpart_bottom">
+                    <img src="garagebottom.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------ Garage enter part ------------------------------------------------------------------  -->
+        <div class="garage_enter" style="display: none;">
+            <div class="garage_enter_top">
+                <div class="garage_enter_top_img">
+                    <img src="garage4.png" alt="">
+                </div>
+
+                <div class="garage_enter_top_text">
+                    <div class="garage_enter_top_text_1" id="entergaragenameid">JOSH BERNSTEIN’S GARAGE</div>
+                    <div class="garage_enter_top_text_2">Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</div>
+                </div>
+
+                <div class="garage_enter_top_icon" onclick="exitentergarage()">
+                    <div class="garage_enter_top_icon_1">
+                        <svg style="margin: 15px;cursor: pointer;" fill="#545454" height="21px" width="21px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+                    </div>
+                </div>
+              
+            </div>
+
+            <div class="garage_enter_bottom" id="entervehicleid">
+                <div class="garage_enter_bottom_top" >
+                    <div class="garage_enter_bottom_top_top">
+                        <div class="garage_enter_bottom_top_top_1">
+                            <div class="garage_enter_bottom_top_top_1_avatar">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOtefq6hB8q_4FfMAbTphPUBm0VQLFQXfFQ&usqp=CAU" alt="" srcset="">
+                            </div>
+
+                            <div class="garage_enter_bottom_top_top_1_text">
+                                <div class="garage_enter_bottom_top_top_1_text_1"> 
+                                    Adez Soyhan
+                                </div>
+
+                                <div class="garage_enter_bottom_top_top_1_text_2">
+                                    OWNER
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="garage_enter_bottom_top_top_2">
+                            <div class="garage_enter_bottom_top_top_2_1"></div>
+                            <div class="garage_enter_bottom_top_top_2_1" style="background-color: #444444;"></div>
+
+                            <div class="garage_enter_bottom_top_top_2_2">S+</div>
+
+                        </div>
+                    </div>
+
+                    <div class="garage_enter_bottom_top_center">
+                        <img src="garagegarip.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_changepart_center_vehiclelogo2">
+                        <img src="https://www.freepnglogos.com/uploads/ferrari-png/red-ferrari-gtb-car-png-image-pngpix-14.png" alt="">
+                    </div>
+
+                    <div class="garage_enter_bottom_top_bottom"> 
+                        <div class="garage_enter_bottom_top_bottom_1">
+                            lamborghini
+                        </div>
+
+                        <div class="garage_enter_bottom_top_bottom_2">huracan 2017</div>
+                    </div>
+                </div>
+                <div class="garage_enter_bottom_top">
+                    <div class="garage_enter_bottom_top_top">
+                        <div class="garage_enter_bottom_top_top_1">
+                            <div class="garage_enter_bottom_top_top_1_avatar">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOtefq6hB8q_4FfMAbTphPUBm0VQLFQXfFQ&usqp=CAU" alt="" srcset="">
+                            </div>
+
+                            <div class="garage_enter_bottom_top_top_1_text">
+                                <div class="garage_enter_bottom_top_top_1_text_1"> 
+                                    Adez Soyhan
+                                </div>
+
+                                <div class="garage_enter_bottom_top_top_1_text_2">
+                                    OWNER
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="garage_enter_bottom_top_top_2">
+                            <div class="garage_enter_bottom_top_top_2_1"></div>
+                            <div class="garage_enter_bottom_top_top_2_1" style="background-color: #444444;"></div>
+
+                            <div class="garage_enter_bottom_top_top_2_2">S+</div>
+
+                        </div>
+                    </div>
+
+                    <div class="garage_enter_bottom_top_center">
+                        <img src="garagegarip.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_changepart_center_vehiclelogo2">
+                        <img src="https://www.freepnglogos.com/uploads/ferrari-png/red-ferrari-gtb-car-png-image-pngpix-14.png" alt="">
+                    </div>
+
+                    <div class="garage_enter_bottom_top_bottom"> 
+                        <div class="garage_enter_bottom_top_bottom_1">
+                            lamborghini
+                        </div>
+
+                        <div class="garage_enter_bottom_top_bottom_2">huracan 2017</div>
+                    </div>
+                </div>
+
+                <div class="garage_enter_bottom_top2">
+                    <div class="garage_enter_bottom_top_top">
+                        <div class="garage_enter_bottom_top_top_1" style="z-index: 3;">
+                            <div class="garage_enter_bottom_top_top_1_avatar" style="background-color:#1D1D1D;z-index: 3;" >
+                            
+                            </div>
+
+                        
+                        </div>
+                    </div>
+
+                    <div class="garage_enter_bottom_top_center" style="z-index: 1;">
+                        <img src="emptygrp.png" alt="">
+                    </div>
+
+                    <div class="garage_enter_bottom_top2_centertext">
+                        <div class="garage_enter_bottom_top2_centertext_1">SELECT</div>
+                        <div class="garage_enter_bottom_top2_centertext_2">GARAGE</div>
+
+                    </div>
+                </div>
+
+
+                <div class="garage_enter_bottom_top2">
+                    <div class="garage_enter_bottom_top_top">
+                        <div class="garage_enter_bottom_top_top_1" style="z-index: 3;">
+                            <div class="garage_enter_bottom_top_top_1_avatar" style="background-color:#1D1D1D;z-index: 3;" >
+                            
+                            </div>
+
+                        
+                        </div>
+                    </div>
+
+                    <div class="garage_enter_bottom_top_center" style="z-index: 1;">
+                        <img src="emptygrp.png" alt="">
+                    </div>
+
+                    <div class="garage_enter_bottom_top2_centertext">
+                        <div class="garage_enter_bottom_top2_centertext_1">SELECT</div>
+                        <div class="garage_enter_bottom_top2_centertext_2">GARAGE</div>
+
+                    </div>
+                </div>
+
+            
+                
+
+
+            </div>
+        </div>
+
+
+        <!-- ------------------------------------------------- vehicle impound ----------------------------------------------------  -->
+        <div class="garageimpound" style="display: none;">
+            <div class="garageimpound_top">
+                <div class="garageimpound_top_img">
+                    <img src="https://static.fandomspot.com/images/10/54518/03-maibatsu-mule-recovery-tow-truck-gta5-mod.jpg" alt="">
+                </div>
+                <div class="garageimpound_top_text">
+                    <div class="garageimpound_top_text_1" >vehicle impound</div>
+                    <div class="garageimpound_top_text_2">Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</div>
+                </div>
+            </div>
+
+            <div class="garageimpound_list"> 
+                <div class="garageimpound_list_item">
+                    <div class="garageimpound_list_item_1">
+                        <i class="fa fa-car item_ekle" aria-hidden="true" ></i>
+                        <div class="garageimpound_list_item_1_1">Sultan Rs</div>
+                        <div class="garageimpound_list_item_1_2"> - 24KGS024</div>
+                    </div>
+
+                    <div class="garageimpound_list_item_2">
+                        
+                        <div class="garageimpound_list_item_2_1">1000</div>
+                        <i class="fa fa-usd item_ekle2" aria-hidden="true"></i>
+                    </div>
+                </div>
+              
+  
+
+
+                
+            </div>
+        </div>
+        
+
+        <div class="garageimpound_load" style="display: none;"></div>
+
+        <div class="garageimpound_modal" style="display: none;">
+            <div class="garageimpound_modal_top_text">ARE YOU SURE ? </div>
+            <div class="garageimpound_modal_center_text">
+                Are you sure you want to pay the specified price and out your vehicle?
+            </div>
+
+            <div class="garageimpound_modal_button">
+                <div class="garageimpound_modal_button_1" onclick="confirmimpound()">CONFIRM</div>
+                <div class="garageimpound_modal_button_2" onclick="cancelimpound()">CANCEL</div>
+            </div>
+        </div>
+
+        <!-- ---------------------------------- job enter---------------------------  -->
+        <div class="buypart" style="display: none;" >
+            <div class="buypart_top">
+                <div class="buypart_top_img">
+                    <img src="garage4.png" alt="">
+                </div>
+
+                <div class="buypart_top_text">
+                    <div class="buypart_top_text_1" id="enterpartgaragenameid">POLICE GARAGE</div>
+                    <div class="buypart_top_text_2">Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</div>
+                </div>
+
+                <div class="buypart_top_icon" onclick="exitenterjobpart()">
+                    <div class="buypart_top_icon_1">
+                        <svg style="margin: 15px;cursor: pointer;" fill="#545454" height="21px" width="21px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+                    </div>
+                </div>
+
+                
+            
+            </div>
+
+            <div class="buypart_bottom" id="jobentermainid">
+                <div class="garage_enter_bottom_top">
+                    <div class="garage_enter_bottom_top_top">
+                        <div class="garage_enter_bottom_top_top_1">
+                            <div class="garage_enter_bottom_top_top_1_avatar">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOtefq6hB8q_4FfMAbTphPUBm0VQLFQXfFQ&usqp=CAU" alt="" srcset="">
+                            </div>
+
+                            <div class="garage_enter_bottom_top_top_1_text">
+                                <div class="garage_enter_bottom_top_top_1_text_1"> 
+                                    Adez Soyhan
+                                </div>
+
+                                <div class="garage_enter_bottom_top_top_1_text_2">
+                                    OWNER
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="garage_enter_bottom_top_top_2">
+                            <div class="garage_enter_bottom_top_top_2_1"></div>
+                            <div class="garage_enter_bottom_top_top_2_1" style="background-color: #444444;"></div>
+
+                            <div class="garage_enter_bottom_top_top_2_2">S+</div>
+
+                        </div>
+                    </div>
+
+                    <div class="garage_enter_bottom_top_center">
+                        <img src="garagegarip.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_changepart_center_vehiclelogo2">
+                        <img src="https://www.freepnglogos.com/uploads/ferrari-png/red-ferrari-gtb-car-png-image-pngpix-14.png" alt="">
+                    </div>
+
+                    <div class="garage_enter_bottom_top_bottom"> 
+                        <div class="garage_enter_bottom_top_bottom_1">
+                            lamborghini
+                        </div>
+
+                        <div class="garage_enter_bottom_top_bottom_2">huracan 2017</div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+        <!-- ---------------------------------- 2. el---------------------------------------------------  -->
+
+        <div class="secondvehicle">
+            <div class="secondvehicle_top">
+                <div style="padding:3px; text-transform:uppercase;">🏷️ Vehicle Sell</div>
+            </div>
+
+            <div class="secondvehicle_center">
+                <div class="secondvehicle_center_1">Vehicle Price</div>
+                <input type="number" class="secondvehicle_center_2" id="sellprice">
+            </div>
+
+            <div class="secondvehicle_center">
+                <div class="secondvehicle_center_1">Sales Description</div>
+                <input type="text" class="secondvehicle_center_3" id="selldesc">
+            </div>
+
+            <div class="secondvehicle_bottom">
+                <img src="ttentaksi.png" alt="">
+            </div>
+            
+            <div class="secondvehicle_button">
+                <button class="button-8" role="button" onclick="confirmsellveh()">Confirm</button>
+            </div>
+
+            
+        </div>
+       
+
+    </div>
+
+
+    <!-- ------------------------------------------------- vehicle info part ----------------------------------------------------  -->
+        <div class="vehicleinfo" style="display: none;" id="vehicleinfoidsi">
+            <div class="garage_settings_changepart_center3" id="vehinfoid" >
+                <div class="garage_settings_changepart_center_top">
+                    <div class="garage_settings_changepart_center_top_top">
+                        <div class="garage_settings_changepart_center_top_top_1">
+                            <div class="garage_settings_changepart_center_top_top_1_avatar">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOtefq6hB8q_4FfMAbTphPUBm0VQLFQXfFQ&usqp=CAU" alt="" srcset="">
+                            </div>
+
+                            <div class="garage_settings_changepart_center_top_top_1_text">
+                                <div class="garage_settings_changepart_center_top_top_1_text_1" id="vehinfoownid"> 
+                                    Adez Soyhan
+                                </div>
+
+                                <div class="garage_settings_changepart_center_top_top_1_text_2">
+                                    OWNER
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="garage_settings_changepart_center_top_top_2">
+                            <div class="garage_settings_changepart_center_top_top_2_1" id="vehinfocolor1id"></div>
+                            <div class="garage_settings_changepart_center_top_top_2_1" id="vehinfocolor2id" style="background-color: #444444;"></div>
+
+                            <div class="garage_settings_changepart_center_top_top_2_2" id="vehinforankid">S+</div>
+
+                        </div>
+                    </div>
+
+                    <div class="garage_settings_changepart_center_top_center">
+                        <img src="garagegarip.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_changepart_center_vehiclelogo4" >
+                        <img id="vehinfoimgid" src="https://www.freepnglogos.com/uploads/ferrari-png/red-ferrari-gtb-car-png-image-pngpix-14.png" alt="">
+                    </div>
+
+                    <div class="garage_settings_changepart_center_top_bottom"> 
+                        <div class="garage_settings_changepart_center_top_bottom_1" id="vehinfonameid">
+                            lamborghini
+                        </div>
+
+                        <div class="garage_settings_changepart_center_top_bottom_2">VEHICLE</div>
+                    </div>
+                </div>
+
+
+                <div class="garage_settings_changepart_center_bottom">
+                    <div class="garage_settings_changepart_center_bottom_left">
+                        <div class="garage_settings_changepart_center_bottom_left_img1">
+                            <img src="card1.png" alt="" style="position: absolute;">
+
+                            <div class="garage_settings_changepart_center_bottom_left_img1_text" id="vehinfofuelid">
+                                54 LITERS
+                            </div>
+                        </div>
+
+                        <div class="garage_settings_changepart_center_bottom_left_img2">
+                            <img src="card2.png" alt="" style="position: absolute;">
+
+                            <div class="garage_settings_changepart_center_bottom_left_img1_text2" id="vehinfospeedtextid">
+                                250/s
+                            </div>
+                        </div>
+
+                        <div class="garage_settings_changepart_center_bottom_left_img3">
+                            <img src="card3.png" alt="" style="position: absolute;">
+
+                            <div class="garage_settings_changepart_center_bottom_left_img1_text3" id="vehinfoseattextid">
+                                2 PEOPLE
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="garage_settings_changepart_center_bottom_right">
+                        <div class="garage_settings_changepart_center_bottom_right_top">
+                            <div class="garage_settings_changepart_center_bottom_right_top_1">
+                                <div class="garage_settings_changepart_center_bottom_right_top_1_1">VEHICLE</div>
+
+                                <div class="garage_settings_changepart_center_bottom_right_top_1_2">ABOUT</div>
+                            </div>
+
+                            <div class="garage_settings_changepart_center_bottom_right_top_2">
+                                  <div class="garage_settings_changepart_center_bottom_right_top_2_text">[H] SPAWN</div>  
+                                
+                                <!-- <svg width="25" height="25" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Group 301"> <circle id="Ellipse 20" cx="13.5" cy="13.5" r="13.5" fill="#FF4545"/> <rect id="Rectangle 86" x="6" y="8.82843" width="4" height="18" rx="2" transform="rotate(-45 6 8.82843)" fill="#232323"/> <rect id="Rectangle 87" x="18.7279" y="6" width="4" height="18" rx="2" transform="rotate(45 18.7279 6)" fill="#232323"/> </g> </svg> -->
+                            </div>
+                        </div>
+
+
+                        <div class="garage_settings_changepart_center_bottom_right_bottom">
+                            <div class="garage_settings_changepart_center_bottom_right_bottom_item">
+                                <div id="vehicleinfo_item1">
+                                    <div class="vehicleinfo_item1_icon">
+                                        <svg  style="margin-bottom:11px; margin-right:12px;" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Component 1"> <path id="Rectangle 38" d="M1.18716 8.51681C0.531512 7.80605 0.531512 6.65369 1.18716 5.94294L5.3879 1.38917C6.04355 0.678418 7.10658 0.678418 7.76223 1.38917L9.37165 3.13385L2.79659 10.2615L1.18716 8.51681Z" fill="#4D4D4D"/> <path id="Rectangle 39" d="M16.2378 1.28693C16.8934 0.57618 17.9564 0.57618 18.6121 1.28693L22.8128 5.8407C23.4685 6.55146 23.4685 7.70382 22.8128 8.41457L21.2034 10.1592L14.6283 3.03161L16.2378 1.28693Z" fill="#4D4D4D"/> <path id="Rectangle 40" d="M15.1003 3.92L20.3267 9.58563L18.0266 12.0791L12.8002 6.41342L15.1003 3.92Z" fill="#4D4D4D"/> <path id="Rectangle 41" d="M3.78003 9.58562L9.00643 3.92L11.3066 6.41342L6.08015 12.079L3.78003 9.58562Z" fill="#4D4D4D"/> <path id="Vector 5" d="M11.2705 7.14L6.23383 12.6L6.62127 14.14L11.0122 9.66C11.7766 9.17009 12.2313 9.19779 13.0786 9.66L17.7279 13.16L17.857 12.6L12.8203 7.14H11.2705Z" fill="#4D4D4D"/> <path id="Vector 5 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M11.2171 7H12.8738L18.0001 12.5571L17.8078 13.3906L13.0125 9.78065C12.5979 9.55521 12.2961 9.44606 12.013 9.44295C11.7342 9.43988 11.4563 9.53976 11.0903 9.77268L6.55326 14.4017L6.08954 12.5585L11.2171 7ZM11.3241 7.28L6.37817 12.6415L6.68933 13.8783L10.9342 9.5474L10.9465 9.53949C11.3388 9.28809 11.6674 9.15914 12.0157 9.16296C12.361 9.16676 12.7081 9.30116 13.1367 9.53494L13.1448 9.53938L17.648 12.9294L17.714 12.6429L12.7668 7.28H11.3241Z" fill="#4D4D4D"/> <path id="Ellipse 3" d="M13.3369 11.2C13.3369 11.9732 12.7587 12.6 12.0454 12.6C11.3322 12.6 10.754 11.9732 10.754 11.2C10.754 10.4268 11.3322 9.8 12.0454 9.8C12.7587 9.8 13.3369 10.4268 13.3369 11.2Z" fill="#4D4D4D"/> <path id="Ellipse 4" d="M17.9862 15.12C17.9862 16.2025 17.1767 17.08 16.1781 17.08C15.1795 17.08 14.3701 16.2025 14.3701 15.12C14.3701 14.0375 15.1795 13.16 16.1781 13.16C17.1767 13.16 17.9862 14.0375 17.9862 15.12Z" fill="#4D4D4D"/> <path id="Ellipse 5" d="M10.754 16.38C10.754 17.6944 9.771 18.76 8.55847 18.76C7.34593 18.76 6.36298 17.6944 6.36298 16.38C6.36298 15.0656 7.34593 14 8.55847 14C9.771 14 10.754 15.0656 10.754 16.38Z" fill="#4D4D4D"/> <g id="Vector 6"> <path d="M10.1082 11.48L8.42932 13.3C10.2419 13.4491 11.2837 14.4417 11.3997 16.52L14.4992 13.3C14.8813 12.8949 15.1253 12.7225 15.6615 12.6L13.8535 11.2C13.7508 13.761 10.8697 14.0101 10.1082 11.48Z" fill="#4D4D4D"/> <path d="M13.7243 15.12L11.9163 16.94H14.4992C13.8296 16.3583 13.6933 15.9483 13.7243 15.12Z" fill="#4D4D4D"/> </g> <path id="Vector 6 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M13.7348 10.9361L15.9757 12.6713L15.6881 12.737C15.4284 12.7963 15.2472 12.866 15.0867 12.9655C14.9252 13.0657 14.7779 13.2003 14.5895 13.4001L14.5886 13.4011L11.2876 16.8303L11.2708 16.5285C11.2141 15.5131 10.9327 14.7826 10.4609 14.2871C9.98803 13.7907 9.30722 13.5126 8.41954 13.4396L8.13916 13.4165L10.1657 11.2197L10.231 11.4366C10.5952 12.6468 11.4553 13.1705 12.2184 13.1096C12.9771 13.049 13.6757 12.4083 13.7244 11.1939L13.7348 10.9361ZM13.9632 11.4571C13.8267 12.6476 13.0779 13.3217 12.2374 13.3888C11.393 13.4562 10.4881 12.909 10.0559 11.7347L8.71336 13.1901C9.51226 13.2982 10.1638 13.5854 10.6406 14.086C11.1214 14.5908 11.4108 15.2983 11.5053 16.2164L14.4089 13.1999C14.4091 13.1997 14.4092 13.1996 14.4094 13.1994C14.6029 12.9943 14.7685 12.8403 14.9584 12.7225C15.0805 12.6468 15.21 12.5876 15.3597 12.5383L13.9632 11.4571ZM13.8661 14.7862L13.8534 15.1257C13.8381 15.5323 13.8651 15.8163 13.9671 16.0658C14.0689 16.315 14.2523 16.5461 14.58 16.8308L14.8668 17.08H11.5874L13.8661 14.7862ZM12.2451 16.8H14.1539C13.9583 16.5968 13.8208 16.399 13.7309 16.1792C13.6396 15.9557 13.6011 15.718 13.5928 15.4434L12.2451 16.8Z" fill="#4D4D4D"/> <path id="Ellipse 6" d="M5.82721 16.9843C5.19571 16.8302 4.61395 16.4952 4.14264 16.0142C3.67133 15.5333 3.32775 14.924 3.14778 14.2499C2.9678 13.5759 2.95802 12.8619 3.11946 12.1824C3.28089 11.5028 3.60763 10.8827 4.06555 10.3868L5.2697 11.6934C5.02753 11.9557 4.85474 12.2836 4.76936 12.643C4.68399 13.0023 4.68916 13.38 4.78434 13.7364C4.87952 14.0929 5.06122 14.4151 5.31047 14.6694C5.55972 14.9238 5.86738 15.101 6.20134 15.1825L5.82721 16.9843Z" fill="#4D4D4D"/> <path id="Ellipse 7" d="M19.0485 16.6866C19.5681 16.4132 20.0198 16.0089 20.3656 15.5074C20.7115 15.006 20.9415 14.422 21.0365 13.8044C21.1314 13.1868 21.0885 12.5535 20.9114 11.9576C20.7342 11.3616 20.4279 10.8204 20.0182 10.3791L18.8174 11.6893C19.0341 11.9227 19.1961 12.2089 19.2898 12.5241C19.3835 12.8393 19.4061 13.1742 19.3559 13.5008C19.3057 13.8274 19.1841 14.1362 19.0011 14.4014C18.8182 14.6666 18.5794 14.8804 18.3046 15.025L19.0485 16.6866Z" fill="#4D4D4D"/> <path id="Rectangle 42" d="M12.8203 17.64H13.5952V20.58C13.5952 20.812 13.4217 21 13.2078 21C12.9938 21 12.8203 20.812 12.8203 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 43" d="M15.145 17.64H15.9198V20.58C15.9198 20.812 15.7464 21 15.5324 21C15.3184 21 15.145 20.812 15.145 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 44" d="M10.4957 18.48C10.4957 18.0161 10.8426 17.64 11.2705 17.64V20.58C11.2705 20.812 11.0971 21 10.8831 21H10.537C10.5142 21 10.4957 20.9799 10.4957 20.9552V18.48Z" fill="#4D4D4D"/> <path id="Rectangle 45" d="M8.17102 19.88C8.17102 19.4161 8.51795 19.04 8.9459 19.04V20.58C8.9459 20.812 8.77244 21 8.55846 21H8.19513C8.18181 21 8.17102 20.9883 8.17102 20.9739V19.88Z" fill="#4D4D4D"/> <path id="Rectangle 46" d="M9.46252 19.32C9.46252 19.0107 9.69381 18.76 9.97911 18.76V19.88C9.97911 20.0346 9.86347 20.16 9.72082 20.16H9.47974C9.47023 20.16 9.46252 20.1516 9.46252 20.1413V19.32Z" fill="#4D4D4D"/> <path id="Rectangle 47" d="M11.7871 18.2C11.7871 17.8907 12.0184 17.64 12.3037 17.64V20.16C12.3037 20.3146 12.1881 20.44 12.0454 20.44H11.8215C11.8025 20.44 11.7871 20.4233 11.7871 20.4027V18.2Z" fill="#4D4D4D"/> <path id="Rectangle 48" d="M14.1118 18.2C14.1118 17.8907 14.343 17.64 14.6283 17.64V20.16C14.6283 20.3146 14.5127 20.44 14.37 20.44H14.1462C14.1272 20.44 14.1118 20.4233 14.1118 20.4027V18.2Z" fill="#4D4D4D"/> </g> </svg>
+                                    </div>
+                                </div>
+
+                                <div class="garage_settings_changepart_center_bottom_right_bottom_item_text">
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_1" id="vehinfenginetextid">88%</div>
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_2">ENGINE HEALTH</div>
+                                </div>
+                            </div>
+
+                            <div class="garage_settings_changepart_center_bottom_right_bottom_item">
+                                <div id="vehicleinfo_item2">
+                                    <div class="vehicleinfo_item1_icon">
+                                        <svg style="margin-bottom:9px; margin-right:11px;" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Group 5"> <path id="Ellipse 1" d="M7.20192 1.17832C5.05796 2.18161 3.24294 3.77303 1.96802 5.76744C0.693088 7.76186 0.0106606 10.0773 0.000123841 12.4444C-0.0104129 14.8114 0.651374 17.1328 1.9085 19.1385C3.16562 21.1442 4.9664 22.7517 7.10134 23.7741L9.63678 18.4793C8.5045 17.9371 7.54944 17.0845 6.88272 16.0208C6.21599 14.9571 5.86501 13.7259 5.8706 12.4705C5.87618 11.2151 6.23811 9.98709 6.91428 8.92934C7.59045 7.87158 8.55306 7.02756 9.69012 6.49546L7.20192 1.17832Z" fill="#4C4C4C"/> <path id="Ellipse 2" d="M8.4023 2.11207C10.0592 1.42814 11.8567 1.1695 13.6356 1.35904C15.4145 1.54857 17.1198 2.18045 18.6007 3.19869C20.0815 4.21693 21.292 5.5901 22.125 7.19658C22.958 8.80305 23.3879 10.5932 23.3764 12.4086C23.3649 14.2239 22.9124 16.0083 22.0592 17.6038C21.2059 19.1993 19.9781 20.5566 18.4845 21.5554C16.9909 22.5543 15.2777 23.1639 13.4965 23.3302C11.7154 23.4965 9.92128 23.2145 8.2732 22.509L8.88066 21.0472C10.2919 21.6513 11.8281 21.8928 13.3533 21.7504C14.8784 21.6079 16.3455 21.086 17.6244 20.2307C18.9033 19.3754 19.9547 18.2132 20.6853 16.847C21.416 15.4808 21.8034 13.9528 21.8132 12.3984C21.8231 10.8439 21.455 9.31104 20.7417 7.93544C20.0284 6.55985 18.9919 5.38402 17.7239 4.51212C16.4559 3.64022 14.9956 3.09916 13.4724 2.93686C11.9491 2.77456 10.41 2.99604 8.9912 3.58167L8.4023 2.11207Z" fill="#4C4C4C"/> <path id="Vector 4" fill-rule="evenodd" clip-rule="evenodd" d="M9.01086 16.2622C11.1008 18.3888 14.5486 18.3888 16.6385 16.2622C18.6963 14.1684 18.6963 10.8316 16.6385 8.73779C14.5486 6.61121 11.1008 6.61121 9.01086 8.73779C6.95309 10.8316 6.95309 14.1684 9.01086 16.2622ZM13.961 11.526C13.4898 11.1019 13.4898 10.3267 13.961 9.9026C14.3851 9.52091 14.998 9.52091 15.4221 9.9026C15.8933 10.3267 15.8933 11.1019 15.4221 11.526C14.998 11.9077 14.3851 11.9077 13.961 11.526ZM10.0649 11.526C9.59371 11.1019 9.59371 10.3267 10.0649 9.9026C10.489 9.52091 11.1019 9.52091 11.526 9.9026C11.9972 10.3267 11.9972 11.1019 11.526 11.526C11.1019 11.9077 10.489 11.9077 10.0649 11.526ZM13.961 15.2597C13.4898 14.8356 13.4898 14.0605 13.961 13.6364C14.3851 13.2547 14.998 13.2547 15.4221 13.6364C15.8933 14.0605 15.8933 14.8356 15.4221 15.2597C14.998 15.6414 14.3851 15.6414 13.961 15.2597ZM10.0649 15.2597C9.59372 14.8356 9.59372 14.0605 10.0649 13.6364C10.489 13.2547 11.1019 13.2547 11.526 13.6364C11.9972 14.0605 11.9972 14.8356 11.526 15.2597C11.1019 15.6414 10.489 15.6414 10.0649 15.2597Z" fill="#4C4C4C" stroke="#4C4C4C"/> </g> </svg>
+                                    
+                                    </div>
+                                </div>
+
+                                <div class="garage_settings_changepart_center_bottom_right_bottom_item_text">
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_1" id="vehinfobraketextid">HARD</div>
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_2">VEHICLE BRAKE</div>
+                                </div>
+                            </div>
+
+
+                            <div class="garage_settings_changepart_center_bottom_right_bottom_item">
+                                <div id="vehicleinfo_item3">
+                                    <div class="vehicleinfo_item1_icon">
+                                        <svg style="margin-bottom:9px; margin-right:15px; " width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path id="Vector 3" d="M9.39149 1L1 5.7758C1.06418 12.7052 0.747035 17.9407 9.39149 23C17.0313 18.9025 17.945 14.4065 18 5.7758L9.39149 1Z" fill="#4C4C4C" stroke="#4C4C4C"/> </svg>
+                                    
+                                    </div>
+                                </div>
+
+                                <div class="garage_settings_changepart_center_bottom_right_bottom_item_text">
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_1" id="vehinfbodytextid">HARD</div>
+                                    <div class="garage_settings_changepart_center_bottom_right_bottom_item_text_2">BODY HEALTH</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+          
+           
+
+
+
+
+        </div>
+      
+
+ 
+        <!-- ------------------------ drawtext --------------------------  -->
+
+        <div class="drwatext" style=" display: none;">
+            <div class="drawtext_icon">
+                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">  <g id="Free-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"> <g transform="translate(-451.000000, -748.000000)" id="Group" stroke="#06F" stroke-width="2"> <g transform="translate(449.000000, 746.000000)" id="Shape"> <line x1="17" y1="3" x2="17" y2="5"> </line> <line x1="7" y1="3" x2="7" y2="5"> </line> <path d="M18,11.5 L18,17.9933387 M18.0043926,21.0066613 L18,20.9933387"> </path> <path d="M8.03064542,21 C7.42550126,21 6.51778501,21 5.30749668,21 C4.50512981,21 4.2141722,20.9218311 3.92083887,20.7750461 C3.62750553,20.6282612 3.39729582,20.4128603 3.24041943,20.1383964 C3.08354305,19.8639324 3,19.5916914 3,18.8409388 L3,7.15906122 C3,6.4083086 3.08354305,6.13606756 3.24041943,5.86160362 C3.39729582,5.58713968 3.62750553,5.37173878 3.92083887,5.22495386 C4.2141722,5.07816894 4.50512981,5 5.30749668,5 L18.6925033,5 C19.4948702,5 19.7858278,5.07816894 20.0791611,5.22495386 C20.3724945,5.37173878 20.6027042,5.58713968 20.7595806,5.86160362 C20.9164569,6.13606756 21,7.24671889 21,7.99747152"> </path> </g> </g> </g> </svg>
+            </div>
+            <div id="drawtextid">[E] TUŞUNA BASARAK MENUYU AÇIN</div>
+           
+        </div>
+
+
+        <!-- ------------------------------------------------- vehicle job ----------------------------------------------------  -->
+
+           <!-- ------------------------------ vehicle buy part ------------------------------------  -->
+           <div class="vehjobpart_buy">
+               <div id="viewpart" style="display: none;">
+                    <div class="vehjobpart_buy_left" onclick="leftarrowchange()">
+                        <p> <span class="arrow left"></span>
+                    </div>
+                    <div class="vehjobpart_buy_right" onclick="rightarrowchange()">
+                        <p> <span class="arrow right"></span>
+                    </div>
+
+                    <div class="vehjobpart_buy_bottom">
+                        <div class="vehjobpart_buy_bottom_top_text">
+                            NONE
+                        </div>
+                        <div class="vehjobpart_buy_bottom_bt_text">Price: 0 $</div>
+                    </div>
+
+                    <div class="vehjobpart_buy_bottom_button" onclick="buyjobvehicle()">
+                        <div style="font-family: interblack; color: #ffffff85; font-size: 18px; font-weight: 600; margin-top:21px; opacity:0.7;">🛒 Buy Vehicle</div>    
+                    </div>
+
+
+                    <div class="vehjobpart_buy_left_menu">
+                        <div class="headerjob">Job Vehicle</div>
+                        <div class="vehjobpart_buy_left_menu_1">
+                            <div class="vehjobpart_buy_left_menu_1_item">
+                                Boss
+                            </div>
+                        </div>
+                    </div>
+               </div>
+
+               <div class="jobbuy_load" style="display: none;"></div>
+
+
+              
+            </div>
+
+
+        <!-- ------------------------------------------------- vehicle sell veh info ----------------------------------------------------  -->
+
+           <div class="vehsellinfo" style="display: none;">
+                
+
+               <div class="vehsellinfo_top">
+                   <div class="vehsellinfo_top_center">
+                      <img src="garagegarip.png" alt="">
+                
+                   </div>
+
+                   <div class="vehsellinfo_top_center_vehlogo">
+                      <img src="https://assets.stickpng.com/images/580b585b2edbce24c47b2c8d.png" alt="" id="vehsellinfoimg">
+                   </div>
+
+                   <div class="garage_settings_changepart_center_top_bottom" style="margin-top: -45px;"> 
+                    <div class="garage_settings_changepart_center_top_bottom_1" id="vehsellinfonameid">
+                        lamborghini
+                    </div>
+
+                    <div class="garage_settings_changepart_center_top_bottom_2">VEHICLE</div>
+                   </div>
+               </div>
+
+                 <div class="vehsellinfo_bottom">
+                    <div class="vehsellinfo_bottom_text">
+                        <div style="color:rgb(119, 0, 255); font-weight:500;"> 👑 OWNER: </div>
+                        <div style="margin-left:10px;" id="sellownername">Paul Malon</div>
+                    </div>
+
+                    <div class="vehsellinfo_bottom_text">
+                        <div style="color:rgba(60, 255, 0, 0.733);font-weight:500;"> 📏 PLATE: </div>
+                        <div style="margin-left:10px; " id="sellplateid">214ESX2134</div>
+                    </div>
+
+                    <div class="vehsellinfo_bottom_text">
+                        <div style="color:rgba(0, 76, 255, 0.733);font-weight:500;"> 🏷️ PRICE: </div>
+                        <div style="margin-left:10px; " id="sellpriceid">1000$</div>
+                    </div>
+
+                    <div class="vehsellinfo_bottom_text">
+                        <div style="color:rgba(145, 47, 109, 0.733);font-weight:500;"> ✍️ DESC: </div>
+                        <div style="margin-left:10px;overflow:hidden;white-space:wrap;text-overflow:ellipsis; " id="selldescid">1000$</div>
+                    </div>
+
+                    <div class="vehsellinfo_bottom_text">
+                        <div id="vehicleinfosell1">
+                            <div class="vehicleinfo_item1_icon">
+                                <svg  style="margin-bottom:7px; margin-right:9px;" width="17" height="15" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Component 1"> <path id="Rectangle 38" d="M1.18716 8.51681C0.531512 7.80605 0.531512 6.65369 1.18716 5.94294L5.3879 1.38917C6.04355 0.678418 7.10658 0.678418 7.76223 1.38917L9.37165 3.13385L2.79659 10.2615L1.18716 8.51681Z" fill="#4D4D4D"/> <path id="Rectangle 39" d="M16.2378 1.28693C16.8934 0.57618 17.9564 0.57618 18.6121 1.28693L22.8128 5.8407C23.4685 6.55146 23.4685 7.70382 22.8128 8.41457L21.2034 10.1592L14.6283 3.03161L16.2378 1.28693Z" fill="#4D4D4D"/> <path id="Rectangle 40" d="M15.1003 3.92L20.3267 9.58563L18.0266 12.0791L12.8002 6.41342L15.1003 3.92Z" fill="#4D4D4D"/> <path id="Rectangle 41" d="M3.78003 9.58562L9.00643 3.92L11.3066 6.41342L6.08015 12.079L3.78003 9.58562Z" fill="#4D4D4D"/> <path id="Vector 5" d="M11.2705 7.14L6.23383 12.6L6.62127 14.14L11.0122 9.66C11.7766 9.17009 12.2313 9.19779 13.0786 9.66L17.7279 13.16L17.857 12.6L12.8203 7.14H11.2705Z" fill="#4D4D4D"/> <path id="Vector 5 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M11.2171 7H12.8738L18.0001 12.5571L17.8078 13.3906L13.0125 9.78065C12.5979 9.55521 12.2961 9.44606 12.013 9.44295C11.7342 9.43988 11.4563 9.53976 11.0903 9.77268L6.55326 14.4017L6.08954 12.5585L11.2171 7ZM11.3241 7.28L6.37817 12.6415L6.68933 13.8783L10.9342 9.5474L10.9465 9.53949C11.3388 9.28809 11.6674 9.15914 12.0157 9.16296C12.361 9.16676 12.7081 9.30116 13.1367 9.53494L13.1448 9.53938L17.648 12.9294L17.714 12.6429L12.7668 7.28H11.3241Z" fill="#4D4D4D"/> <path id="Ellipse 3" d="M13.3369 11.2C13.3369 11.9732 12.7587 12.6 12.0454 12.6C11.3322 12.6 10.754 11.9732 10.754 11.2C10.754 10.4268 11.3322 9.8 12.0454 9.8C12.7587 9.8 13.3369 10.4268 13.3369 11.2Z" fill="#4D4D4D"/> <path id="Ellipse 4" d="M17.9862 15.12C17.9862 16.2025 17.1767 17.08 16.1781 17.08C15.1795 17.08 14.3701 16.2025 14.3701 15.12C14.3701 14.0375 15.1795 13.16 16.1781 13.16C17.1767 13.16 17.9862 14.0375 17.9862 15.12Z" fill="#4D4D4D"/> <path id="Ellipse 5" d="M10.754 16.38C10.754 17.6944 9.771 18.76 8.55847 18.76C7.34593 18.76 6.36298 17.6944 6.36298 16.38C6.36298 15.0656 7.34593 14 8.55847 14C9.771 14 10.754 15.0656 10.754 16.38Z" fill="#4D4D4D"/> <g id="Vector 6"> <path d="M10.1082 11.48L8.42932 13.3C10.2419 13.4491 11.2837 14.4417 11.3997 16.52L14.4992 13.3C14.8813 12.8949 15.1253 12.7225 15.6615 12.6L13.8535 11.2C13.7508 13.761 10.8697 14.0101 10.1082 11.48Z" fill="#4D4D4D"/> <path d="M13.7243 15.12L11.9163 16.94H14.4992C13.8296 16.3583 13.6933 15.9483 13.7243 15.12Z" fill="#4D4D4D"/> </g> <path id="Vector 6 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M13.7348 10.9361L15.9757 12.6713L15.6881 12.737C15.4284 12.7963 15.2472 12.866 15.0867 12.9655C14.9252 13.0657 14.7779 13.2003 14.5895 13.4001L14.5886 13.4011L11.2876 16.8303L11.2708 16.5285C11.2141 15.5131 10.9327 14.7826 10.4609 14.2871C9.98803 13.7907 9.30722 13.5126 8.41954 13.4396L8.13916 13.4165L10.1657 11.2197L10.231 11.4366C10.5952 12.6468 11.4553 13.1705 12.2184 13.1096C12.9771 13.049 13.6757 12.4083 13.7244 11.1939L13.7348 10.9361ZM13.9632 11.4571C13.8267 12.6476 13.0779 13.3217 12.2374 13.3888C11.393 13.4562 10.4881 12.909 10.0559 11.7347L8.71336 13.1901C9.51226 13.2982 10.1638 13.5854 10.6406 14.086C11.1214 14.5908 11.4108 15.2983 11.5053 16.2164L14.4089 13.1999C14.4091 13.1997 14.4092 13.1996 14.4094 13.1994C14.6029 12.9943 14.7685 12.8403 14.9584 12.7225C15.0805 12.6468 15.21 12.5876 15.3597 12.5383L13.9632 11.4571ZM13.8661 14.7862L13.8534 15.1257C13.8381 15.5323 13.8651 15.8163 13.9671 16.0658C14.0689 16.315 14.2523 16.5461 14.58 16.8308L14.8668 17.08H11.5874L13.8661 14.7862ZM12.2451 16.8H14.1539C13.9583 16.5968 13.8208 16.399 13.7309 16.1792C13.6396 15.9557 13.6011 15.718 13.5928 15.4434L12.2451 16.8Z" fill="#4D4D4D"/> <path id="Ellipse 6" d="M5.82721 16.9843C5.19571 16.8302 4.61395 16.4952 4.14264 16.0142C3.67133 15.5333 3.32775 14.924 3.14778 14.2499C2.9678 13.5759 2.95802 12.8619 3.11946 12.1824C3.28089 11.5028 3.60763 10.8827 4.06555 10.3868L5.2697 11.6934C5.02753 11.9557 4.85474 12.2836 4.76936 12.643C4.68399 13.0023 4.68916 13.38 4.78434 13.7364C4.87952 14.0929 5.06122 14.4151 5.31047 14.6694C5.55972 14.9238 5.86738 15.101 6.20134 15.1825L5.82721 16.9843Z" fill="#4D4D4D"/> <path id="Ellipse 7" d="M19.0485 16.6866C19.5681 16.4132 20.0198 16.0089 20.3656 15.5074C20.7115 15.006 20.9415 14.422 21.0365 13.8044C21.1314 13.1868 21.0885 12.5535 20.9114 11.9576C20.7342 11.3616 20.4279 10.8204 20.0182 10.3791L18.8174 11.6893C19.0341 11.9227 19.1961 12.2089 19.2898 12.5241C19.3835 12.8393 19.4061 13.1742 19.3559 13.5008C19.3057 13.8274 19.1841 14.1362 19.0011 14.4014C18.8182 14.6666 18.5794 14.8804 18.3046 15.025L19.0485 16.6866Z" fill="#4D4D4D"/> <path id="Rectangle 42" d="M12.8203 17.64H13.5952V20.58C13.5952 20.812 13.4217 21 13.2078 21C12.9938 21 12.8203 20.812 12.8203 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 43" d="M15.145 17.64H15.9198V20.58C15.9198 20.812 15.7464 21 15.5324 21C15.3184 21 15.145 20.812 15.145 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 44" d="M10.4957 18.48C10.4957 18.0161 10.8426 17.64 11.2705 17.64V20.58C11.2705 20.812 11.0971 21 10.8831 21H10.537C10.5142 21 10.4957 20.9799 10.4957 20.9552V18.48Z" fill="#4D4D4D"/> <path id="Rectangle 45" d="M8.17102 19.88C8.17102 19.4161 8.51795 19.04 8.9459 19.04V20.58C8.9459 20.812 8.77244 21 8.55846 21H8.19513C8.18181 21 8.17102 20.9883 8.17102 20.9739V19.88Z" fill="#4D4D4D"/> <path id="Rectangle 46" d="M9.46252 19.32C9.46252 19.0107 9.69381 18.76 9.97911 18.76V19.88C9.97911 20.0346 9.86347 20.16 9.72082 20.16H9.47974C9.47023 20.16 9.46252 20.1516 9.46252 20.1413V19.32Z" fill="#4D4D4D"/> <path id="Rectangle 47" d="M11.7871 18.2C11.7871 17.8907 12.0184 17.64 12.3037 17.64V20.16C12.3037 20.3146 12.1881 20.44 12.0454 20.44H11.8215C11.8025 20.44 11.7871 20.4233 11.7871 20.4027V18.2Z" fill="#4D4D4D"/> <path id="Rectangle 48" d="M14.1118 18.2C14.1118 17.8907 14.343 17.64 14.6283 17.64V20.16C14.6283 20.3146 14.5127 20.44 14.37 20.44H14.1462C14.1272 20.44 14.1118 20.4233 14.1118 20.4027V18.2Z" fill="#4D4D4D"/> </g> </svg>
+                            </div>
+                        </div>
+
+                        <div id="vehicleinfosell2">
+                            <div class="vehicleinfo_item1_icon">
+                                <svg  style="margin-bottom:7px; margin-right:9px;" width="17" height="15" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Component 1"> <path id="Rectangle 38" d="M1.18716 8.51681C0.531512 7.80605 0.531512 6.65369 1.18716 5.94294L5.3879 1.38917C6.04355 0.678418 7.10658 0.678418 7.76223 1.38917L9.37165 3.13385L2.79659 10.2615L1.18716 8.51681Z" fill="#4D4D4D"/> <path id="Rectangle 39" d="M16.2378 1.28693C16.8934 0.57618 17.9564 0.57618 18.6121 1.28693L22.8128 5.8407C23.4685 6.55146 23.4685 7.70382 22.8128 8.41457L21.2034 10.1592L14.6283 3.03161L16.2378 1.28693Z" fill="#4D4D4D"/> <path id="Rectangle 40" d="M15.1003 3.92L20.3267 9.58563L18.0266 12.0791L12.8002 6.41342L15.1003 3.92Z" fill="#4D4D4D"/> <path id="Rectangle 41" d="M3.78003 9.58562L9.00643 3.92L11.3066 6.41342L6.08015 12.079L3.78003 9.58562Z" fill="#4D4D4D"/> <path id="Vector 5" d="M11.2705 7.14L6.23383 12.6L6.62127 14.14L11.0122 9.66C11.7766 9.17009 12.2313 9.19779 13.0786 9.66L17.7279 13.16L17.857 12.6L12.8203 7.14H11.2705Z" fill="#4D4D4D"/> <path id="Vector 5 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M11.2171 7H12.8738L18.0001 12.5571L17.8078 13.3906L13.0125 9.78065C12.5979 9.55521 12.2961 9.44606 12.013 9.44295C11.7342 9.43988 11.4563 9.53976 11.0903 9.77268L6.55326 14.4017L6.08954 12.5585L11.2171 7ZM11.3241 7.28L6.37817 12.6415L6.68933 13.8783L10.9342 9.5474L10.9465 9.53949C11.3388 9.28809 11.6674 9.15914 12.0157 9.16296C12.361 9.16676 12.7081 9.30116 13.1367 9.53494L13.1448 9.53938L17.648 12.9294L17.714 12.6429L12.7668 7.28H11.3241Z" fill="#4D4D4D"/> <path id="Ellipse 3" d="M13.3369 11.2C13.3369 11.9732 12.7587 12.6 12.0454 12.6C11.3322 12.6 10.754 11.9732 10.754 11.2C10.754 10.4268 11.3322 9.8 12.0454 9.8C12.7587 9.8 13.3369 10.4268 13.3369 11.2Z" fill="#4D4D4D"/> <path id="Ellipse 4" d="M17.9862 15.12C17.9862 16.2025 17.1767 17.08 16.1781 17.08C15.1795 17.08 14.3701 16.2025 14.3701 15.12C14.3701 14.0375 15.1795 13.16 16.1781 13.16C17.1767 13.16 17.9862 14.0375 17.9862 15.12Z" fill="#4D4D4D"/> <path id="Ellipse 5" d="M10.754 16.38C10.754 17.6944 9.771 18.76 8.55847 18.76C7.34593 18.76 6.36298 17.6944 6.36298 16.38C6.36298 15.0656 7.34593 14 8.55847 14C9.771 14 10.754 15.0656 10.754 16.38Z" fill="#4D4D4D"/> <g id="Vector 6"> <path d="M10.1082 11.48L8.42932 13.3C10.2419 13.4491 11.2837 14.4417 11.3997 16.52L14.4992 13.3C14.8813 12.8949 15.1253 12.7225 15.6615 12.6L13.8535 11.2C13.7508 13.761 10.8697 14.0101 10.1082 11.48Z" fill="#4D4D4D"/> <path d="M13.7243 15.12L11.9163 16.94H14.4992C13.8296 16.3583 13.6933 15.9483 13.7243 15.12Z" fill="#4D4D4D"/> </g> <path id="Vector 6 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M13.7348 10.9361L15.9757 12.6713L15.6881 12.737C15.4284 12.7963 15.2472 12.866 15.0867 12.9655C14.9252 13.0657 14.7779 13.2003 14.5895 13.4001L14.5886 13.4011L11.2876 16.8303L11.2708 16.5285C11.2141 15.5131 10.9327 14.7826 10.4609 14.2871C9.98803 13.7907 9.30722 13.5126 8.41954 13.4396L8.13916 13.4165L10.1657 11.2197L10.231 11.4366C10.5952 12.6468 11.4553 13.1705 12.2184 13.1096C12.9771 13.049 13.6757 12.4083 13.7244 11.1939L13.7348 10.9361ZM13.9632 11.4571C13.8267 12.6476 13.0779 13.3217 12.2374 13.3888C11.393 13.4562 10.4881 12.909 10.0559 11.7347L8.71336 13.1901C9.51226 13.2982 10.1638 13.5854 10.6406 14.086C11.1214 14.5908 11.4108 15.2983 11.5053 16.2164L14.4089 13.1999C14.4091 13.1997 14.4092 13.1996 14.4094 13.1994C14.6029 12.9943 14.7685 12.8403 14.9584 12.7225C15.0805 12.6468 15.21 12.5876 15.3597 12.5383L13.9632 11.4571ZM13.8661 14.7862L13.8534 15.1257C13.8381 15.5323 13.8651 15.8163 13.9671 16.0658C14.0689 16.315 14.2523 16.5461 14.58 16.8308L14.8668 17.08H11.5874L13.8661 14.7862ZM12.2451 16.8H14.1539C13.9583 16.5968 13.8208 16.399 13.7309 16.1792C13.6396 15.9557 13.6011 15.718 13.5928 15.4434L12.2451 16.8Z" fill="#4D4D4D"/> <path id="Ellipse 6" d="M5.82721 16.9843C5.19571 16.8302 4.61395 16.4952 4.14264 16.0142C3.67133 15.5333 3.32775 14.924 3.14778 14.2499C2.9678 13.5759 2.95802 12.8619 3.11946 12.1824C3.28089 11.5028 3.60763 10.8827 4.06555 10.3868L5.2697 11.6934C5.02753 11.9557 4.85474 12.2836 4.76936 12.643C4.68399 13.0023 4.68916 13.38 4.78434 13.7364C4.87952 14.0929 5.06122 14.4151 5.31047 14.6694C5.55972 14.9238 5.86738 15.101 6.20134 15.1825L5.82721 16.9843Z" fill="#4D4D4D"/> <path id="Ellipse 7" d="M19.0485 16.6866C19.5681 16.4132 20.0198 16.0089 20.3656 15.5074C20.7115 15.006 20.9415 14.422 21.0365 13.8044C21.1314 13.1868 21.0885 12.5535 20.9114 11.9576C20.7342 11.3616 20.4279 10.8204 20.0182 10.3791L18.8174 11.6893C19.0341 11.9227 19.1961 12.2089 19.2898 12.5241C19.3835 12.8393 19.4061 13.1742 19.3559 13.5008C19.3057 13.8274 19.1841 14.1362 19.0011 14.4014C18.8182 14.6666 18.5794 14.8804 18.3046 15.025L19.0485 16.6866Z" fill="#4D4D4D"/> <path id="Rectangle 42" d="M12.8203 17.64H13.5952V20.58C13.5952 20.812 13.4217 21 13.2078 21C12.9938 21 12.8203 20.812 12.8203 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 43" d="M15.145 17.64H15.9198V20.58C15.9198 20.812 15.7464 21 15.5324 21C15.3184 21 15.145 20.812 15.145 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 44" d="M10.4957 18.48C10.4957 18.0161 10.8426 17.64 11.2705 17.64V20.58C11.2705 20.812 11.0971 21 10.8831 21H10.537C10.5142 21 10.4957 20.9799 10.4957 20.9552V18.48Z" fill="#4D4D4D"/> <path id="Rectangle 45" d="M8.17102 19.88C8.17102 19.4161 8.51795 19.04 8.9459 19.04V20.58C8.9459 20.812 8.77244 21 8.55846 21H8.19513C8.18181 21 8.17102 20.9883 8.17102 20.9739V19.88Z" fill="#4D4D4D"/> <path id="Rectangle 46" d="M9.46252 19.32C9.46252 19.0107 9.69381 18.76 9.97911 18.76V19.88C9.97911 20.0346 9.86347 20.16 9.72082 20.16H9.47974C9.47023 20.16 9.46252 20.1516 9.46252 20.1413V19.32Z" fill="#4D4D4D"/> <path id="Rectangle 47" d="M11.7871 18.2C11.7871 17.8907 12.0184 17.64 12.3037 17.64V20.16C12.3037 20.3146 12.1881 20.44 12.0454 20.44H11.8215C11.8025 20.44 11.7871 20.4233 11.7871 20.4027V18.2Z" fill="#4D4D4D"/> <path id="Rectangle 48" d="M14.1118 18.2C14.1118 17.8907 14.343 17.64 14.6283 17.64V20.16C14.6283 20.3146 14.5127 20.44 14.37 20.44H14.1462C14.1272 20.44 14.1118 20.4233 14.1118 20.4027V18.2Z" fill="#4D4D4D"/> </g> </svg>
+                            </div>
+                        </div>
+
+                        <div id="vehicleinfosell3">
+                            <div class="vehicleinfo_item1_icon">
+                                <svg  style="margin-bottom:7px; margin-right:9px;" width="17" height="15" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <g id="Component 1"> <path id="Rectangle 38" d="M1.18716 8.51681C0.531512 7.80605 0.531512 6.65369 1.18716 5.94294L5.3879 1.38917C6.04355 0.678418 7.10658 0.678418 7.76223 1.38917L9.37165 3.13385L2.79659 10.2615L1.18716 8.51681Z" fill="#4D4D4D"/> <path id="Rectangle 39" d="M16.2378 1.28693C16.8934 0.57618 17.9564 0.57618 18.6121 1.28693L22.8128 5.8407C23.4685 6.55146 23.4685 7.70382 22.8128 8.41457L21.2034 10.1592L14.6283 3.03161L16.2378 1.28693Z" fill="#4D4D4D"/> <path id="Rectangle 40" d="M15.1003 3.92L20.3267 9.58563L18.0266 12.0791L12.8002 6.41342L15.1003 3.92Z" fill="#4D4D4D"/> <path id="Rectangle 41" d="M3.78003 9.58562L9.00643 3.92L11.3066 6.41342L6.08015 12.079L3.78003 9.58562Z" fill="#4D4D4D"/> <path id="Vector 5" d="M11.2705 7.14L6.23383 12.6L6.62127 14.14L11.0122 9.66C11.7766 9.17009 12.2313 9.19779 13.0786 9.66L17.7279 13.16L17.857 12.6L12.8203 7.14H11.2705Z" fill="#4D4D4D"/> <path id="Vector 5 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M11.2171 7H12.8738L18.0001 12.5571L17.8078 13.3906L13.0125 9.78065C12.5979 9.55521 12.2961 9.44606 12.013 9.44295C11.7342 9.43988 11.4563 9.53976 11.0903 9.77268L6.55326 14.4017L6.08954 12.5585L11.2171 7ZM11.3241 7.28L6.37817 12.6415L6.68933 13.8783L10.9342 9.5474L10.9465 9.53949C11.3388 9.28809 11.6674 9.15914 12.0157 9.16296C12.361 9.16676 12.7081 9.30116 13.1367 9.53494L13.1448 9.53938L17.648 12.9294L17.714 12.6429L12.7668 7.28H11.3241Z" fill="#4D4D4D"/> <path id="Ellipse 3" d="M13.3369 11.2C13.3369 11.9732 12.7587 12.6 12.0454 12.6C11.3322 12.6 10.754 11.9732 10.754 11.2C10.754 10.4268 11.3322 9.8 12.0454 9.8C12.7587 9.8 13.3369 10.4268 13.3369 11.2Z" fill="#4D4D4D"/> <path id="Ellipse 4" d="M17.9862 15.12C17.9862 16.2025 17.1767 17.08 16.1781 17.08C15.1795 17.08 14.3701 16.2025 14.3701 15.12C14.3701 14.0375 15.1795 13.16 16.1781 13.16C17.1767 13.16 17.9862 14.0375 17.9862 15.12Z" fill="#4D4D4D"/> <path id="Ellipse 5" d="M10.754 16.38C10.754 17.6944 9.771 18.76 8.55847 18.76C7.34593 18.76 6.36298 17.6944 6.36298 16.38C6.36298 15.0656 7.34593 14 8.55847 14C9.771 14 10.754 15.0656 10.754 16.38Z" fill="#4D4D4D"/> <g id="Vector 6"> <path d="M10.1082 11.48L8.42932 13.3C10.2419 13.4491 11.2837 14.4417 11.3997 16.52L14.4992 13.3C14.8813 12.8949 15.1253 12.7225 15.6615 12.6L13.8535 11.2C13.7508 13.761 10.8697 14.0101 10.1082 11.48Z" fill="#4D4D4D"/> <path d="M13.7243 15.12L11.9163 16.94H14.4992C13.8296 16.3583 13.6933 15.9483 13.7243 15.12Z" fill="#4D4D4D"/> </g> <path id="Vector 6 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M13.7348 10.9361L15.9757 12.6713L15.6881 12.737C15.4284 12.7963 15.2472 12.866 15.0867 12.9655C14.9252 13.0657 14.7779 13.2003 14.5895 13.4001L14.5886 13.4011L11.2876 16.8303L11.2708 16.5285C11.2141 15.5131 10.9327 14.7826 10.4609 14.2871C9.98803 13.7907 9.30722 13.5126 8.41954 13.4396L8.13916 13.4165L10.1657 11.2197L10.231 11.4366C10.5952 12.6468 11.4553 13.1705 12.2184 13.1096C12.9771 13.049 13.6757 12.4083 13.7244 11.1939L13.7348 10.9361ZM13.9632 11.4571C13.8267 12.6476 13.0779 13.3217 12.2374 13.3888C11.393 13.4562 10.4881 12.909 10.0559 11.7347L8.71336 13.1901C9.51226 13.2982 10.1638 13.5854 10.6406 14.086C11.1214 14.5908 11.4108 15.2983 11.5053 16.2164L14.4089 13.1999C14.4091 13.1997 14.4092 13.1996 14.4094 13.1994C14.6029 12.9943 14.7685 12.8403 14.9584 12.7225C15.0805 12.6468 15.21 12.5876 15.3597 12.5383L13.9632 11.4571ZM13.8661 14.7862L13.8534 15.1257C13.8381 15.5323 13.8651 15.8163 13.9671 16.0658C14.0689 16.315 14.2523 16.5461 14.58 16.8308L14.8668 17.08H11.5874L13.8661 14.7862ZM12.2451 16.8H14.1539C13.9583 16.5968 13.8208 16.399 13.7309 16.1792C13.6396 15.9557 13.6011 15.718 13.5928 15.4434L12.2451 16.8Z" fill="#4D4D4D"/> <path id="Ellipse 6" d="M5.82721 16.9843C5.19571 16.8302 4.61395 16.4952 4.14264 16.0142C3.67133 15.5333 3.32775 14.924 3.14778 14.2499C2.9678 13.5759 2.95802 12.8619 3.11946 12.1824C3.28089 11.5028 3.60763 10.8827 4.06555 10.3868L5.2697 11.6934C5.02753 11.9557 4.85474 12.2836 4.76936 12.643C4.68399 13.0023 4.68916 13.38 4.78434 13.7364C4.87952 14.0929 5.06122 14.4151 5.31047 14.6694C5.55972 14.9238 5.86738 15.101 6.20134 15.1825L5.82721 16.9843Z" fill="#4D4D4D"/> <path id="Ellipse 7" d="M19.0485 16.6866C19.5681 16.4132 20.0198 16.0089 20.3656 15.5074C20.7115 15.006 20.9415 14.422 21.0365 13.8044C21.1314 13.1868 21.0885 12.5535 20.9114 11.9576C20.7342 11.3616 20.4279 10.8204 20.0182 10.3791L18.8174 11.6893C19.0341 11.9227 19.1961 12.2089 19.2898 12.5241C19.3835 12.8393 19.4061 13.1742 19.3559 13.5008C19.3057 13.8274 19.1841 14.1362 19.0011 14.4014C18.8182 14.6666 18.5794 14.8804 18.3046 15.025L19.0485 16.6866Z" fill="#4D4D4D"/> <path id="Rectangle 42" d="M12.8203 17.64H13.5952V20.58C13.5952 20.812 13.4217 21 13.2078 21C12.9938 21 12.8203 20.812 12.8203 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 43" d="M15.145 17.64H15.9198V20.58C15.9198 20.812 15.7464 21 15.5324 21C15.3184 21 15.145 20.812 15.145 20.58V17.64Z" fill="#4D4D4D"/> <path id="Rectangle 44" d="M10.4957 18.48C10.4957 18.0161 10.8426 17.64 11.2705 17.64V20.58C11.2705 20.812 11.0971 21 10.8831 21H10.537C10.5142 21 10.4957 20.9799 10.4957 20.9552V18.48Z" fill="#4D4D4D"/> <path id="Rectangle 45" d="M8.17102 19.88C8.17102 19.4161 8.51795 19.04 8.9459 19.04V20.58C8.9459 20.812 8.77244 21 8.55846 21H8.19513C8.18181 21 8.17102 20.9883 8.17102 20.9739V19.88Z" fill="#4D4D4D"/> <path id="Rectangle 46" d="M9.46252 19.32C9.46252 19.0107 9.69381 18.76 9.97911 18.76V19.88C9.97911 20.0346 9.86347 20.16 9.72082 20.16H9.47974C9.47023 20.16 9.46252 20.1516 9.46252 20.1413V19.32Z" fill="#4D4D4D"/> <path id="Rectangle 47" d="M11.7871 18.2C11.7871 17.8907 12.0184 17.64 12.3037 17.64V20.16C12.3037 20.3146 12.1881 20.44 12.0454 20.44H11.8215C11.8025 20.44 11.7871 20.4233 11.7871 20.4027V18.2Z" fill="#4D4D4D"/> <path id="Rectangle 48" d="M14.1118 18.2C14.1118 17.8907 14.343 17.64 14.6283 17.64V20.16C14.6283 20.3146 14.5127 20.44 14.37 20.44H14.1462C14.1272 20.44 14.1118 20.4233 14.1118 20.4027V18.2Z" fill="#4D4D4D"/> </g> </svg>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="vehsellinfo_bottom_btngrp">
+
+                            <div class="vehsellinfo_bottom_button">
+                                <div style="margin-top:5px;">BUY [H]</div>
+                            </div>
+
+                            <div class="vehsellinfo_bottom_button" style="margin-left:5px; display:none;" id="deletesellvehicle">
+                                <div style="margin-top:5px;">DELETE [G]</div>
+                            </div>
+                    </div>
+                   
+                    
+                 </div>
+                 
+           </div>
+
+
+            <div class="sellconfirmpart" style="display: none;">
+                <div class="sell_load" style="display: none;"></div>
+
+
+                <div class="sellconfirmpart_modal" style="display: none;">
+                    <div class="sellconfirmpart_modal_top_text">ARE YOU SURE ? </div>
+                    <div class="sellconfirmpart_modal_center_text">
+                        Do you want to buy this vehicle?
+                    </div>
+        
+                    <div class="sellconfirmpart_modal_button">
+                        <div class="sellconfirmpart_modal_button_1" onclick="confirmsell()">CONFIRM</div>
+                        <div class="sellconfirmpart_modal_button_2" onclick="cancelsell()">CANCEL</div>
+                    </div>
+                </div>
+            </div>
+           
+
+</body>
+
+<script src="progressbar.js"></script>
+<script src="index.js"></script>
+</html>
